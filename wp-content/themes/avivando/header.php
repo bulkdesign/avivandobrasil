@@ -38,7 +38,7 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'storefront_before_header' ); ?>
 	<div class="navbar-fixed">
-		<nav class="z-depth-3">
+		<nav>
 			<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 				<div class="container">
 					<div class="row hide-on-med-and-down" style="margin:0;">
