@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-html {
-	font-family: 'Raleway', sans-serif !important;
-}
-
 select {
 	display: block !important;
 }
