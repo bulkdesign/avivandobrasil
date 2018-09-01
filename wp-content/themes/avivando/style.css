@@ -73,8 +73,9 @@ body {
 
 /* MEDIDAS */
 .padding0 {padding: 0px !important;}
+.paddingb0 {padding-bottom: 0 !important;}
 .padding10 {padding: 10px !important;}
-.padding15 {padding: 15px !important;}
+.paddingt15 {padding: 15px 0 0 !important;}
 .padding20 {padding: 20px 20px 0 !important;}
 .padding40 {padding: 40px 0 !important;}
 .paddingr0 {padding-right: 0 !important;}

@@ -95,30 +95,22 @@
         <h3 class="texto-menos-escuro fs25">Veja abaixo os principais eventos que acontecerão nos próximos dias:</h3>
       </div>
       <div class="col s12">
-        <div class="col s12 m4">
-          <div class="container-evento">
-            <img class="image-center" src="<?php bloginfo('template_url'); ?>/images/evento1.png" />
-            <h3 class="bold padding15">Conferência do Espírito Santo Lagoinha</h3>
-            <p>Conferência na Igreja Batista da Lagoinha</p>
-          </div>
-          <a href="#" class="btn btn-destaque grey-text">Mais informações</a>
-        </div>
-        <div class="col s12 m4">
-          <div class="container-evento">
-            <img class="image-center" src="<?php bloginfo('template_url'); ?>/images/evento2.png" />
-            <h3 class="bold padding15">Conferência Sounds</h3>
-            <p>Conferência de Louvor e Adoração na Comunidade Alcance Curitiba, PR</p>
-          </div>
-          <a href="#" class="btn btn-destaque grey-text">Mais informações</a>
-        </div>
-        <div class="col s12 m4">
-          <div class="container-evento">
-            <img class="image-center" src="<?php bloginfo('template_url'); ?>/images/evento3.png" />
-            <h3 class="bold padding15">Conferência Profética</h3>
-            <p>Conferência Profética na sede da IEQ - Belém/PA</p>
-          </div>
-          <a href="#" class="btn btn-destaque grey-text">Mais informações</a>
-        </div>
+        <?php $eventos = array('post_type' => 'tp_event', 'posts_per_page' => 3);
+          $listadeeventos = new WP_Query( $eventos );
+            if ( $listadeeventos->have_posts() ) {
+              while ( $listadeeventos->have_posts() ) : $listadeeventos->the_post(); ?>
+                <div class="col s12 m4">
+                  <div class="container-evento">
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                      <?php the_post_thumbnail('medium', array('class' => 'image-center hoverable')); ?>
+                    </a>
+                    <h3 class="bold paddingt15 paddingb0"><?php the_title(); ?></h3>
+                    <?php the_excerpt(); ?>
+                  </div>
+                  <a href="<?php the_permalink(); ?>" class="btn btn-destaque margin10 grey-text">Mais informações</a>
+                </div>
+            <?php endwhile; }
+          else { echo "Não há eventos."; } ?>
       </div>
     </div>
   </div>
