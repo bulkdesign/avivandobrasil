@@ -1,4 +1,4 @@
-<?php /* Template Name: Como Comprar */ ?>
+<?php /* Template Name: Igrejas */ ?>
 <?php get_header();?>
 
 <style type="text/css">
@@ -24,8 +24,6 @@
 
 </style>
 
-<?php $comocomprar = new WP_Query( array( 'post_type' => 'como_comprar', 'posts_per_page' => '1' )); ?>
-<?php while ( $comocomprar->have_posts() ) : $comocomprar->the_post(); ?>
   <!-- TOPO -->
   <div class="comocomprar" style="background: url('<?php the_field('imagem_do_topo'); ?>');background-size:cover;background-repeat: no-repeat;">
     <h1 class="white-text bold"><?php the_field('titulo_da_pagina'); ?></h1>
@@ -87,7 +85,5 @@
     </div>
   </div>
 </div>
-<?php endwhile; ?>
-<?php wp_reset_query(); ?>
 
-<?php get_footer('home'); ?>
+<?php get_footer(); ?>

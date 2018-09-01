@@ -72,7 +72,7 @@ function my_login_logo_one() {
 ?> 
 <style type="text/css"> 
 body.login div#login h1 a {
-background-image: url(http://www.bulkdesign.com.br/cbdmed/wp-content/themes/storefront/images/logo.png);
+background-image: none;
 width: 100%;
 background-size: 100%;
 }
