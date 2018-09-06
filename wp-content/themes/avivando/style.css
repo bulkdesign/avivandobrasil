@@ -75,6 +75,7 @@ body {
 .padding0 {padding: 0px !important;}
 .paddingb0 {padding-bottom: 0 !important;}
 .padding10 {padding: 10px !important;}
+.paddingr5 {padding-right: 5px !important;}
 .paddingt15 {padding: 15px 0 0 !important;}
 .padding20 {padding: 20px 20px 0 !important;}
 .padding40 {padding: 40px 0 !important;}
@@ -130,9 +131,17 @@ body {
     text-align: left;
 }
 
+form {
+	margin-bottom: 0 !important;
+}
+
 /* CORES */
 .green-rgba {
 	background-color: rgba(57, 73, 55, 0.8);
+}
+
+.amarelo {
+	background-color: #FBC643;
 }
 
 .not-so-black {
@@ -184,22 +193,36 @@ h3 {
 .bold, h1.bold, p.bold, h3.bold {
 	font-family: 'ChronicaPro-Bold';
 	font-weight: bold !important;
+	color: #333333;
+}
+
+i.tiny {
+	font-size: 20px;
 }
 
 /* BOTÕES */
 .btn-destaque {
 	border: 1.5px solid rgba(255, 255, 255, 0.45);
     background: rgba(0, 0, 0, 0.8);
-    height: 42px;
+    height: 38px;
     border-radius: 4px;
     letter-spacing: 3px;
     font-size: 13px;
     font-weight: bold;
 }
 
+.btn-destaque:hover {
+	background: #FBC643 !important;
+	color: rgba(0, 0, 0, 0.8) !important;
+}
+
 .newsletter input {
 	border-radius: 4px;
 	text-align: left !important;
+}
+
+body.woocommerce-cart .woocommerce .product-quantity input[type="number"].qty {
+	pointer-events: all !important;
 }
 
 /* TOPO */
@@ -216,6 +239,10 @@ nav ul a {
 	color: #FFFFFF !important;
 	font-size: 0.9rem;
 	padding: 0 8px;
+}
+
+ul.menu li a:hover {
+	color: #FBC643 !important;
 }
 
 .menu {
@@ -386,8 +413,48 @@ footer.page-footer ul {
 	color: #FFFFFF;
 }
 
-
 /* OUTROS */
+#wpsl-result-list {
+    background-color: #191919;
+}
+
+.wpsl-store-location p {
+    color:#eabe35!important;
+}
+
+#wpsl-gmap {
+    width:75%!important;
+}
+
+.wpsl-search{
+    margin-bottom:0!important;
+}
+
+#wpsl-result-list {
+    width:25%!important;
+}
+
+.wpsl-direction-wrap {
+	color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#wpsl-result-list li p {
+    margin-bottom:0!important;
+}
+
+#wpsl-wrap .wpsl-info-window p {
+    margin:10px 0!important;
+    font-size:13px!important;
+}
+
+#wpsl-result-list a {
+	font-size: 18px;
+	font-weight: bold;
+	color: #FBC643 !important;
+}
+
 .card .card-content {
 	padding: 0 24px 24px !important;
     height: auto;
@@ -395,6 +462,15 @@ footer.page-footer ul {
 
 .card a {
 	color: #e4c731 !important;
+}
+
+.tp_event_counter {
+	background-color: #FBC643 !important;
+    padding: 0px !important;
+    position: absolute;
+    left: 0%;
+    right: 0;
+    bottom: 1px;
 }
 
 div.asp_main_container+[id*=asp-try-1] {

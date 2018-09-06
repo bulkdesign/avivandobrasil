@@ -148,29 +148,4 @@ function obtendo_o_preco() {
     return $product->get_regular_price();
 }
 
-/**
-* FUNCAO PARA PERMITIR COMPRA DE 1 PRODUTO APENAS
-**/
-
-add_filter( 'woocommerce_add_to_cart_validation', 'bbloomer_only_one_in_cart', 99, 2 );
-  
-function bbloomer_only_one_in_cart( $passed, $added_product_id ) {
- 
-global $woocommerce;
- 
-// empty cart: new item will replace previous
-$woocommerce->cart->empty_cart();
- 
-// display a message if you like
-wc_add_notice( 'Produto adicionado ao carrinho!', 'notice' );
- 
-return $passed;
-}
-
-add_filter( 'woocommerce_checkout_get_value' , 'clear_checkout_fields' );
-
-function clear_checkout_fields($input) {
-	return '';
-}
-
 ?>

@@ -75,19 +75,21 @@
   </div>
 </div>
 <!-- ENCONTRE AS IGREJAS -->
-<div class="hide-on-small-only parallax-container" style="height: 700px">
+<div class="hide-on-small-only parallax-container" style="height: 750px">
   <div class="container">
     <div class="row">
-      <div class="col s8 push-s2 margin50 marginb50">
+      <div class="col s8 push-s2 margin50">
         <h1 class="padding40 texto-escuro bold">Encontre as Igrejas mais próximas:</h1>
-        <br>
+      </div>
+      <div class="col s12 m12">
+        <?php echo do_shortcode('[wpsl]'); ?>
         <a href="#" class="btn btn-destaque texto-amarelo">Ver todas as Igrejas</a>
       </div>
     </div>
   </div>
 </div>
 <!-- PRÓXIMOS EVENTOS -->
-<div class="grey lighten-2" style="height: 800px">
+<div class="grey lighten-2" style="height: 850px">
   <div class="container">
     <div class="row">
       <div class="col s12 margin70 marginb50">
@@ -112,16 +114,7 @@
             <?php endwhile; }
           else { echo "Não há eventos."; } ?>
       </div>
-    </div>
-  </div>
-</div>
-<!-- ENCONTRE OS EVENTOS -->
-<div class="hide-on-small-only parallax-container" style="height: 700px">
-  <div class="container">
-    <div class="row">
-      <div class="col s8 push-s2 margin50 marginb50">
-        <h1 class="padding40 texto-escuro bold">Encontre os Eventos mais próximos:</h1>
-        <br>
+      <div class="col s12 margin50 marginb50">
         <a href="#" class="btn btn-destaque texto-amarelo">Ver todos os Eventos</a>
       </div>
     </div>

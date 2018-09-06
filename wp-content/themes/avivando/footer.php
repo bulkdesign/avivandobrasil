@@ -65,6 +65,7 @@
 <?php wp_footer(); ?>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/assets/js/bootstrap-table.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/assets/js/filter-control/bootstrap-table-filter-control.js"></script>
+<script src="<?php bloginfo('template_url') ?>/assets/js/jquery.bxslider/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/funcoes.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/materialize.min.js"></script>
 

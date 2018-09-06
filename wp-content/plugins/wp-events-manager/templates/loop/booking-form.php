@@ -10,7 +10,7 @@ $user_reg = $event->booked_quantity( get_current_user_id() );
 
 <div class="event_register_area">
 
-    <h2><?php echo esc_html( $event->get_title() ) ?></h2>
+    <h2 class="bold"><?php echo esc_html( $event->get_title() ) ?></h2>
 
     <form name="event_register" class="event_register" method="POST">
 
@@ -18,7 +18,7 @@ $user_reg = $event->booked_quantity( get_current_user_id() );
             <input type="hidden" name="qty" value="1" min="1" />
 		<?php } else { ?>
             <div class="event_auth_form_field">
-                <label for="event_register_qty"><?php _e( 'Quantity', 'wp-events-manager' ) ?></label>
+                <label for="event_register_qty"><?php _e( 'Quantidade', 'wp-events-manager' ) ?></label>
                 <input type="number" name="qty" value="1" min="1" max="<?php echo $event->get_slot_available() ?>" id="event_register_qty" />
             </div>
 		<?php } ?>
@@ -27,7 +27,7 @@ $user_reg = $event->booked_quantity( get_current_user_id() );
         <!--Hide payment option when cost is 0-->
 		<?php if ( !$event->is_free() ) {
 			if ( $payments ) { ?>
-                <ul class="event_auth_payment_methods">
+                <ul class="event_auth_payment_methods hide">
 					<?php $i = 0; ?>
 					<?php foreach ( $payments as $id => $payment ) : ?>
                         <li>
@@ -47,7 +47,7 @@ $user_reg = $event->booked_quantity( get_current_user_id() );
             <input type="hidden" name="event_id" value="<?php echo esc_attr( $event_id ) ?>" />
             <input type="hidden" name="action" value="event_auth_register" />
 			<?php wp_nonce_field( 'event_auth_register_nonce', 'event_auth_register_nonce' ); ?>
-            <button class="event_register_submit event_auth_button" <?php echo $payments ? '' : 'disabled="disabled"' ?>><?php _e( 'Register Now', 'wp-events-manager' ); ?></button>
+            <button style="width: 100%;" class="event_register_submit event_auth_button margin10 green" <?php echo $payments ? '' : 'disabled="disabled"' ?>><?php _e( 'Adicionar ao carrinho', 'wp-events-manager' ); ?></button>
         </div>
 
     </form>

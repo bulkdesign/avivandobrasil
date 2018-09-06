@@ -8,81 +8,48 @@
   padding: 0;
 }
   
-.comocomprar {
+.igrejas {
   width:100%;
-  height:300px;
+  height:500px;
   text-align:center;
   display:flex;
   justify-content:center;
   align-items:center;
 }
 
-.comocomprar h1 {
-  font-size:50px;
-  padding:10px 10px 0;
+.igrejas h1 {
+  font-size: 50px;
+  padding: 10px 10px 0;
+  margin: 0;
+}
+
+#mapa {
+  height: auto;
+  padding: 50px 0px;
+}
+
+#mapa h1 {
+  margin: 20px 0 30px;
 }
 
 </style>
 
-  <!-- TOPO -->
-  <div class="comocomprar" style="background: url('<?php the_field('imagem_do_topo'); ?>');background-size:cover;background-repeat: no-repeat;">
-    <h1 class="white-text bold"><?php the_field('titulo_da_pagina'); ?></h1>
-  </div>
+<!-- TOPO -->
+<div class="igrejas" style="background: url('https://images.unsplash.com/photo-1514430700556-1807904774e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cbb22861b82b9b633c01a3a36a1b428c&auto=format&fit=crop&w=1200&q=80');background-size:cover;background-position:0 -250px;background-repeat: no-repeat;">
+  <h1 class="white-text bold"><?php the_title(); ?></h1>
+</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col s12 padding40">
-      <p><?php the_field('descrição_inicial'); ?></p>
-      <!-- PASSO 1 -->
-      <div class="col s12 m4">
-        <div class="card green">
-          <div class="card-image">
-            <h1 class="white-text padding20 bold">PASSO 1</h1>
-          </div>
-          <div class="card-content">
-            <span class="white-text bold"><?php the_field('passo_1'); ?></span>
-          </div>
+<!-- INÍCIO DO WHILE -->
+<div class="row">
+  <div class="col s12 m10 push-m1 margin60">
+    <?php $igrejas = new WP_Query( array( 'post_type' => 'wpsl_stores' )); ?>
+      <?php while ( $igrejas->have_posts() ) : $igrejas->the_post(); ?>
+        <div class="col s12 m4">
+          <?php the_post_thumbnail('medium', array('class' => 'image-center hoverable')); ?>
+          <h3 class="margin20"><?php the_title(); ?></h3>
         </div>
-      </div>
-      <!-- PASSO 2 -->
-      <div class="col s12 m4">
-        <div class="card green">
-          <div class="card-image">
-            <h1 class="white-text padding20 bold">PASSO 2</h1>
-          </div>
-          <div class="card-content">
-            <span class="white-text bold"><?php the_field('passo_2'); ?></span>
-          </div>
-        </div>
-      </div>
-      <!-- PASSO 3 -->
-      <div class="col s12 m4">
-        <div class="card green">
-          <div class="card-image">
-            <h1 class="white-text padding20 bold">PASSO 3</h1>
-          </div>
-          <div class="card-content">
-            <span class="white-text bold"><?php the_field('passo_3'); ?></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- FINALIZAÇÃO DO PEDIDO -->
-    <div class="col s12 m10 push-m1">
-      <h1 class="green-text bold"><?php the_field('titulo_2'); ?></h1>
-      <?php the_field('texto_2'); ?>
-    </div>
-    <!-- FORMAS DE PAGAMENTO -->
-    <div class="col s12 m10 push-m1 padding40">
-      <h1 class="green-text bold"><?php the_field('titulo_3'); ?></h1>
-      <?php the_field('texto_3'); ?>
-    </div>
-    <!-- CONTATO -->
-    <div class="col s12 m10 push-m1 marginb50">
-      <h1 class="green-text bold"><?php the_field('titulo_4'); ?></h1>
-      <?php the_field('texto_4'); ?>
-      <a href="<?php the_field('link_do_botão'); ?>" class="btn green-dark bold">ENTRAR EM CONTATO</a>
-    </div>
+      <?php endwhile; ?>
+    <?php wp_reset_query(); ?>
   </div>
 </div>
 
