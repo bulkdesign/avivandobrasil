@@ -56,7 +56,7 @@ if ( !class_exists( 'WPSL_Frontend' ) ) {
             add_action( 'wp_enqueue_scripts',          array( $this, 'add_frontend_styles' ) );
             add_action( 'wp_footer',                   array( $this, 'add_frontend_scripts' ) );
             
-            add_filter( 'the_content',                 array( $this, 'cpt_template' ) );
+            // add_filter( 'the_content',                 array( $this, 'cpt_template' ) );
             
             add_shortcode( 'wpsl',                 array( $this, 'show_store_locator' ) );
             add_shortcode( 'wpsl_address',         array( $this, 'show_store_address' ) );

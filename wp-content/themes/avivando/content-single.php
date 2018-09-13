@@ -21,10 +21,8 @@
 
 </style>
 
-<?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
-
 <!-- TOPO -->
-<div class="destaque-post" style="background: url('<?php echo $featured_img_url; ?>');background-size:cover;background-repeat: no-repeat;">
+<div class="destaque-post" style="background: url('<?php echo the_field('foto_de_destaque'); ?>');background-size:cover;background-repeat: no-repeat;">
   <h1 class="white-text bold"><?php the_title(); ?></h1>
 </div>
 

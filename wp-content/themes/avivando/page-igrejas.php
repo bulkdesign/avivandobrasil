@@ -41,12 +41,17 @@
 
 <!-- INÍCIO DO WHILE -->
 <div class="row">
+  <div class="col s12 margin60">
+    <?php echo do_shortcode('[searchandfilter fields="search,wpsl_store_category" hide_empty="0"]'); ?>
+  </div>
   <div class="col s12 m10 push-m1 margin60">
     <?php $igrejas = new WP_Query( array( 'post_type' => 'wpsl_stores' )); ?>
       <?php while ( $igrejas->have_posts() ) : $igrejas->the_post(); ?>
         <div class="col s12 m4">
-          <?php the_post_thumbnail('medium', array('class' => 'image-center hoverable')); ?>
-          <h3 class="margin20"><?php the_title(); ?></h3>
+          <a href="<?php echo the_permalink(); ?>">
+            <?php the_post_thumbnail('medium', array('class' => 'image-center hoverable')); ?>
+            <h3 class="margin20"><?php the_title(); ?></h3>
+          </a>
         </div>
       <?php endwhile; ?>
     <?php wp_reset_query(); ?>

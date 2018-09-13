@@ -414,6 +414,15 @@ footer.page-footer ul {
 }
 
 /* OUTROS */
+img.logo {
+	max-width: 300px;
+	margin-top: 50px;
+}
+
+.wpsl-contact-details, .wpsl-location-address, .wpsl-locations-details {
+	margin-bottom: 0 !important;
+}
+
 #wpsl-result-list {
     background-color: #191919;
 }
