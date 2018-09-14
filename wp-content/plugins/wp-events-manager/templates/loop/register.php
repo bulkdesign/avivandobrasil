@@ -20,9 +20,9 @@ if ( absint( $event->qty ) == 0 || get_post_meta( get_the_ID(), 'tp_event_status
         <div class="col s12 m8 push-m2">
             <ul class="event-info" style="margin-left: 0; margin-right: 0">
                 <li class="price">
-                    <span style="display: inline-flex"><i class="tiny material-icons">location_on</i>Curitiba, PR</span>
+                    <span style="display: inline-flex"><i class="tiny material-icons">location_on</i><?php the_field('local'); ?></span>
                     <br>
-                    <span style="display: inline-flex"><i class="tiny material-icons">schedule</i>28 de Setembro - 1 de Outubro</span>
+                    <span style="display: inline-flex"><i class="tiny material-icons">schedule</i><?php the_field('data_do_treinamento'); ?></span>
                     <br>
                     <span class="label"><?php _e( 'Valor:', 'wp-events-manager' ) ?></span>
                     <span class="detail bold"><?php printf( '%s', $event->is_free() ? __( 'Free', 'wp-events-manager' ) : wpems_format_price( $event->get_price() ) ) ?></span>

@@ -277,7 +277,7 @@ msgstr "j M, Y @ G:i"
 
 #: admin/class-metaboxes.php:850
 msgid "Store draft updated."
-msgstr "Rascunho de loja atualizado."
+msgstr "Rascunho atualizado."
 
 #: admin/class-metaboxes.php:856
 msgid "View store"
@@ -1407,7 +1407,7 @@ msgstr "Não responde"
 
 #: admin/class-settings.php:953
 msgid "In the store listings"
-msgstr "Na listagem de lojas"
+msgstr "Na listagem"
 
 #: admin/class-settings.php:954
 msgid "In the info window on the map"
@@ -1730,7 +1730,7 @@ msgstr ""
 
 #: admin/templates/map-settings.php:212
 msgid "Show a \"More info\" link in the store listings?"
-msgstr "Mostrar o link \"Mais informação\" nas listas de lojas?"
+msgstr "Mostrar o link \"Mais informação\" nas listas?"
 
 #: admin/templates/map-settings.php:212
 #, php-format
@@ -1811,7 +1811,7 @@ msgid ""
 "feature can result in the page scrolling down. %s %sThis option is disabled "
 "on mobile devices.%s"
 msgstr ""
-"Se o localizador de lojas não é colocado na parte superior da página, "
+"Se o localizador não é colocado na parte superior da página, "
 "activando esta funcionalidade pode resultar que a página desça. %s %sEsta "
 "opção é desativada em dispositivos móveis.%s"
 
@@ -1837,7 +1837,7 @@ msgstr "Esconder a distância nos resultados da pesquisa?"
 #: admin/templates/map-settings.php:248
 msgid "If a user hovers over the search results the store marker"
 msgstr ""
-"Se um utilizador passar sobre os resultados da pesquisa os marcadores de loja"
+"Se um utilizador passar sobre os resultados da pesquisa os marcadores"
 
 #: admin/templates/map-settings.php:248
 #, php-format
@@ -1908,7 +1908,7 @@ msgstr ""
 
 #: admin/templates/map-settings.php:292
 msgid "Store Editor"
-msgstr "Editor de Loja"
+msgstr "Editor"
 
 #: admin/templates/map-settings.php:295
 msgid "Default country"
@@ -1951,7 +1951,7 @@ msgid ""
 msgstr ""
 "O país padrão e as horas de abertura são somente aplicadas quando uma nova "
 "loja é criada. Por isso alterar os valores padrão não irá ter efeito nas "
-"localizações de lojas existentes."
+"localizações existentes."
 
 #: admin/templates/map-settings.php:342
 msgid "Permalink"
@@ -1963,7 +1963,7 @@ msgstr "Activar links permanentes?"
 
 #: admin/templates/map-settings.php:349
 msgid "Store slug"
-msgstr "URL de loja"
+msgstr "URL"
 
 #: admin/templates/map-settings.php:353
 msgid "Category slug"
@@ -2125,7 +2125,7 @@ msgstr "WPSL temporário"
 
 #: admin/templates/map-settings.php:473
 msgid "Clear store locator transient cache"
-msgstr "Limpar localização de lojas de cache temporário"
+msgstr "Limpar localização de cache temporário"
 
 #: admin/upgrade.php:82
 msgid "info window"
@@ -2150,7 +2150,7 @@ msgid ""
 "locations need to be %sconverted%s to custom post types."
 msgstr ""
 "Porque você atualizou o WP Store Locator da versão 1.x, %sa atual "
-"localização de loja precisa de ser %sconvertida%s para tipos de conteúdo "
+"localização precisa de ser %sconvertida%s para tipos de conteúdo "
 "personalizado."
 
 #: admin/upgrade.php:392
@@ -2165,7 +2165,7 @@ msgid ""
 msgstr ""
 "O script de conversão de locais expirou. %s Você pode clicar no botão "
 "\"Começar a converter\" novamente para reiniciar o script. %s Se existem "
-"milhares de localizações de lojas por converter e você continua vendo esta "
+"milhares de localizações por converter e você continua vendo esta "
 "mensagem, então você pode tentar entrar em contato com seu alojamento e "
 "perguntar se eles podem aumentar o tempo máximo de execução. O plugin%s "
 "tentou desativar o tempo máximo de execução, mas se você está lendo isso, "
@@ -2173,7 +2173,7 @@ msgstr ""
 
 #: admin/upgrade.php:413
 msgid "Store locations to convert:"
-msgstr "Localização de lojas para converter:"
+msgstr "Localização para converter:"
 
 #: admin/upgrade.php:415
 msgid "Start Converting"
@@ -2185,7 +2185,7 @@ msgid ""
 "All the store locations are now converted to custom post types. %s You can "
 "view them on the %sAll Stores%s page."
 msgstr ""
-"Todos as localizações de lojas agora são convertidos em tipos de conteúdos "
+"Todos as localizações agora são convertidos em tipos de conteúdos "
 "personalizados. %s Você pode vê-las na página %sTodas as Lojas%s."
 
 #: frontend/class-frontend.php:599
@@ -2193,7 +2193,7 @@ msgid ""
 "If you use the [wpsl_address] shortcode outside a store page you need to set "
 "the ID attribute."
 msgstr ""
-"Se utilizar o shortcode [wpsl_address] fora de uma página de loja você "
+"Se utilizar o shortcode [wpsl_address] fora de uma página você "
 "necessita de definir o atributo ID."
 
 #: frontend/class-frontend.php:710
@@ -2201,7 +2201,7 @@ msgid ""
 "If you use the [wpsl_hours] shortcode outside a store page you need to set "
 "the ID attribute."
 msgstr ""
-"Se utilizar o shortcode [wpsl_hours] fora de uma página de loja você "
+"Se utilizar o shortcode [wpsl_hours] fora de uma página você "
 "necessita de definir o atributo ID."
 
 #: frontend/class-frontend.php:759
@@ -2209,7 +2209,7 @@ msgid ""
 "If you use the [wpsl_map] shortcode outside a store page you need to set the "
 "ID attribute."
 msgstr ""
-"Se utilizar o shortcode [wpsl_map] fora de uma página de loja você necessita "
+"Se utilizar o shortcode [wpsl_map] fora de uma página você necessita "
 "de definir o atributo ID."
 
 #: frontend/class-frontend.php:1084
@@ -2248,7 +2248,7 @@ msgstr "Lojas"
 
 #: inc/class-post-types.php:55
 msgid "Store Locator"
-msgstr "Localizador de lojas"
+msgstr "Localizador"
 
 #: inc/class-post-types.php:56
 #, php-format
@@ -2292,43 +2292,43 @@ msgstr "Sem %s encontrada no lixo"
 
 #: inc/class-post-types.php:107 inc/class-post-types.php:117
 msgid "Store Categories"
-msgstr "Categorias de Lojas"
+msgstr "Categorias"
 
 #: inc/class-post-types.php:108
 msgid "Store Category"
-msgstr "Categoria de Loja"
+msgstr "Categoria"
 
 #: inc/class-post-types.php:109
 msgid "Search Store Categories"
-msgstr "Pesquisar Categorias de Lojas"
+msgstr "Pesquisar Categorias"
 
 #: inc/class-post-types.php:110
 msgid "All Store Categories"
-msgstr "Todas as Categorias de Lojas"
+msgstr "Todas as Categorias"
 
 #: inc/class-post-types.php:111
 msgid "Parent Store Category"
-msgstr "Pai da Categoria de Loja"
+msgstr "Pai da Categoria"
 
 #: inc/class-post-types.php:112
 msgid "Parent Store Category:"
-msgstr "Pai da Categoria de Loja:"
+msgstr "Pai da Categoria:"
 
 #: inc/class-post-types.php:113
 msgid "Edit Store Category"
-msgstr "Editar Categoria de Loja"
+msgstr "Editar Categoria"
 
 #: inc/class-post-types.php:114
 msgid "Update Store Category"
-msgstr "Actualizar Categoria de Loja"
+msgstr "Actualizar Categoria"
 
 #: inc/class-post-types.php:115
 msgid "Add New Store Category"
-msgstr "Adicionar Nova Categoria de Loja"
+msgstr "Adicionar Nova Categoria"
 
 #: inc/class-post-types.php:116
 msgid "New Store Category Name"
-msgstr "Novo Nome de Categoria de Loja"
+msgstr "Novo Nome de Categoria"
 
 #: inc/class-post-types.php:147
 msgid "Enter store title here"
@@ -2340,7 +2340,7 @@ msgstr "Código postal"
 
 #: inc/wpsl-functions.php:184
 msgid "Show the store list below the map"
-msgstr "Mostrar a lista de lojas abaixo do mapa"
+msgstr "Mostrar a lista abaixo do mapa"
 
 #: inc/wpsl-functions.php:201
 msgid "Monday"

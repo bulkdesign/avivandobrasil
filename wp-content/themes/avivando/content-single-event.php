@@ -21,19 +21,15 @@
 
 </style>
 
-<?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
-
 <!-- TOPO -->
-<div class="destaque-post" style="background: url('<?php echo $featured_img_url; ?>');background-size:cover;background-repeat: no-repeat;">
+<div class="destaque-post" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('<?php echo the_field('foto_destacada'); ?>');background-size:cover;background-repeat: no-repeat;">
 	<div class="row">
 		<div class="col s12">
 			<?php do_action( 'tp_event_single_event_title' ); ?>
 		</div>
-		<div class="col s12">
-			<h3 class="white-text bold">Aqui vem o local do evento</h3>
-		</div>
 	</div>
 </div>
+
 <div class="container">
 	<div class="row">
 		<div class="col s12 m4 push-m4">
@@ -43,17 +39,39 @@
 			<div class="col s12 m8 margin50">
 				<div class="justify marginb50">
 					<!-- Descricao -->
-					<h3 class="bold">Descrição do evento</h3>
+					<h3 class="bold">Descrição:</h3>
 					<?php the_content(); ?>
+					<!-- Instrutor -->
+					<?php if (get_field('instrutor_do_treinamento')): ?>
+						<h3 class="bold">Instrutor do Evento:</h3>
+						<?php the_field('instrutor_do_treinamento'); ?>
+					<?php endif; ?>
+					<!-- Programação -->
+					<?php if (get_field('programacao')): ?>
+						<h3 class="bold margin30">Programação:</h3>
+						<?php the_field('programacao'); ?>
+					<?php endif; ?>
+					<!-- Local -->
+					<?php if (get_field('local')): ?>
+						<h3 class="bold">Local:</h3>
+						<?php the_field('local'); ?>
+					<?php endif; ?>
+					<!-- Investimento -->
+					<?php if (get_field('investimento')): ?>
+						<h3 class="bold">Investimento:</h3>
+						<?php the_field('investimento'); ?>
+					<?php endif; ?>				
 					<!-- Instrucoes -->
-					<h3 class="bold">Instruções</h3>
-					<?php the_field('instrucoes'); ?>
+					<?php if (get_field('instrucoes')): ?>
+						<h3 class="bold">Instruções</h3>
+						<?php the_field('instrucoes'); ?>
+					<?php endif; ?>	
 					<!-- Dados do anunciante -->
 					<h3 class="bold">Dados do anunciante</h3>
 					<table class="center">
 						<thead style="background:#F2F2F2">
 							<tr>
-								<th class="center">Nome da empresa</th>
+								<th class="center">Produtora do Evento</th>
 								<th class="center">Telefone</th>
 								<th class="center">Site</th>
 								<th class="center">E-mail</th>
@@ -62,14 +80,39 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td class="center">Igreja Batista Alameda</td>
-								<td class="center">(41) 3380-4106</td>
-								<td class="center"><a href="http://www.igrejabatistaalameda.com.br/conferencia">Clique aqui</a></td>
-								<td class="center">comunicacao@alameda.org.br</td>
+								<td class="center"><?php the_field('produtor_do_evento'); ?></td>
+								<td class="center"><?php the_field('telefone'); ?></td>
+								<td class="center"><a href="<?php the_field('site'); ?>">Clique aqui</a></td>
+								<td class="center"><?php the_field('e-mail'); ?></td>
 								<td class="center">
-									<img class="left paddingr5" width="24" class="image-center" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/facebook.png" /> 
-									<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/instagram.png" /> 
-									<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/whatsapp.png" /> 
+									<?php if(get_field('facebook')): ?>
+										<a href="<?php echo the_field('facebook'); ?>">
+											<img class="left paddingr5" width="24" class="image-center" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/facebook.png" />
+										</a>
+										<?php else: ?>
+											<span></span>
+									<?php endif; ?>
+									<?php if(get_field('instagram')): ?>
+										<a href="<?php echo the_field('instagram'); ?>">
+											<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/instagram.png" /> 
+										</a>
+										<?php else: ?>
+											<span></span>
+									<?php endif; ?>
+									<?php if(get_field('whatsapp')): ?>
+										<a href="https://api.whatsapp.com/send?phone=55<?php echo the_field('whatsapp'); ?>">
+											<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/whatsapp.png" /> 
+										</a>
+										<?php else: ?>
+											<span></span>
+									<?php endif; ?>
+									<?php if(get_field('youtube')): ?>
+										<a href="<?php echo the_field('youtube'); ?>">
+											<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/youtube.png" /> 
+										</a>
+										<?php else: ?>
+											<span></span>
+									<?php endif; ?>
 								</td>
 							</tr>
 						</tbody>
@@ -78,8 +121,9 @@
 					<span>Compartilhe este evento:</span>
 					<?php echo do_shortcode('[addtoany buttons="facebook,whatsapp,linkedin,twitter"]'); ?>
 				</div>
-			</div>
+			</div>	
 			<div class="col s12 m4">
+				<?php if( get_field('fotos')): ?>
 				<div class="col s12 m8 push-m2 margin50">
 					<div class="slider">
 						<?php while( have_rows('fotos') ): the_row(); 
@@ -93,6 +137,7 @@
 						<?php endwhile; ?>
 					</div>
 				</div>
+				<?php endif; ?>
 				<div class="margin60 marginb0">
 					<h3 class="bold">Informações</h3>
 					<?php do_action( 'tp_event_after_single_event' ); ?>

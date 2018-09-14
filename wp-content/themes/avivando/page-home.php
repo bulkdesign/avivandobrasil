@@ -83,7 +83,7 @@
       </div>
       <div class="col s12 m12">
         <?php echo do_shortcode('[wpsl]'); ?>
-        <a href="#" class="btn btn-destaque texto-amarelo">Ver todas as Igrejas</a>
+        <a href="<?php echo site_url(); ?>/igrejas" class="btn btn-destaque texto-amarelo">Ver todas as Igrejas</a>
       </div>
     </div>
   </div>

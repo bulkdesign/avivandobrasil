@@ -201,7 +201,9 @@ i.tiny {
 }
 
 /* BOTÕES */
-.btn-destaque {
+.btn-destaque, .searchandfilter input[type="submit"] {
+	color: #FFFFFF;
+	text-transform: uppercase;
 	border: 1.5px solid rgba(255, 255, 255, 0.45);
     background: rgba(0, 0, 0, 0.8);
     height: 38px;
@@ -211,7 +213,7 @@ i.tiny {
     font-weight: bold;
 }
 
-.btn-destaque:hover {
+.btn-destaque:hover, .searchandfilter input[type="submit"]:hover {
 	background: #FBC643 !important;
 	color: rgba(0, 0, 0, 0.8) !important;
 }
@@ -417,6 +419,11 @@ footer.page-footer ul {
 img.logo {
 	max-width: 300px;
 	margin-top: 50px;
+}
+
+.searchandfilter input[type=text]:not(.browser-default) {
+	width: 300px !important;
+	border-radius: 4px;
 }
 
 .wpsl-contact-details, .wpsl-location-address, .wpsl-locations-details {
@@ -1224,7 +1231,7 @@ div.fixed-table-scroll-outer {
 select, input.form-control {
 	margin: 0;
 	display: block;
-	height: 30px;
+	height: 38px;
 	padding: 0 10px;
 	font-size: 14px;
 	line-height: 1.42857143;

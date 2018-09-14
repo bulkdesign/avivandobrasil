@@ -15,75 +15,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-	<?php
-		/**
-		 * tp_event_before_main_content hook
-		 *
-		 * @hooked tp_event_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked tp_event_breadcrumb - 20
-		 */
-		do_action( 'tp_event_before_main_content' );
-	?>
+	<div class="col s12 margin140">
+		<?php echo do_shortcode('[searchandfilter search_placeholder="Busque aqui..." submit_label="Buscar" fields="search,wpsl_store_category,denominacao" hide_empty="0" hierarchical="1" class="form"]'); ?>
+	</div>
 
-		<?php
-			/**
-			 * tp_event_archive_description hook
-			 *
-			 * @hooked tp_event_taxonomy_archive_description - 10
-			 * @hooked tp_event_room_archive_description - 10
-			 */
-			do_action( 'tp_event_archive_description' );
-		?>
+	<?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
+		<header class="page-header margin30">
+			<h3><?php printf( esc_attr__( 'Resultados encontrados para: %s', 'storefront' ), '<span class="bold">' . get_search_query() . '</span>' ); ?></h3>
+		</header>
 
-			<?php
-				/**
-				 * tp_event_before_event_loop hook
-				 *
-				 * @hooked tp_event_result_count - 20
-				 * @hooked tp_event_catalog_ordering - 30
-				 */
-				do_action( 'tp_event_before_event_loop' );
-			?>
+		<div class="row">
+		  	<div class="col s12 margin60">
+        		<div class="col s12 m4">
+	          		<a href="<?php echo the_permalink(); ?>">
+	            		<?php the_post_thumbnail('medium', array('class' => 'image-center hoverable')); ?>
+	            		<h3 class="margin20"><?php the_title(); ?></h3>
+	          		</a>
+	        	</div>
+			</div>
+		</div>
 
-			<ul>
+		<?php else : ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+		<div id="primary" class="marginb50">
+			<main id="main" class="site-main" role="main">
+				<header class="page-header margin20">
+					<h3>Infelizmente não foi encontrado nenhum resultado para a sua pesquisa.<br>
+					Realize a busca novamente ou retorne para a página inicial:</h3>
+					<a href="<?php echo site_url(); ?>" class="btn btn-destaque margin20">Voltar</a>
+				</header>
+			</main>
+		</div>
 
-					<?php wpems_get_template_part( 'content', 'event' ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			</ul>
-
-			<?php
-				/**
-				 * tp_event_after_event_loop hook
-				 *
-				 * @hooked tp_event_pagination - 10
-				 */
-				do_action( 'tp_event_after_event_loop' );
-			?>
-
-		<?php endif; ?>
-
-	<?php
-		/**
-		 * tp_event_after_main_content hook
-		 *
-		 * @hooked tp_event_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'tp_event_after_main_content' );
-	?>
-
-	<?php
-		/**
-		 * tp_event_sidebar hook
-		 *
-		 * @hooked tp_event_get_sidebar - 10
-		 */
-		do_action( 'tp_event_sidebar' );
-	?>
+	<?php endif; ?>
 
 <?php get_footer(); ?>

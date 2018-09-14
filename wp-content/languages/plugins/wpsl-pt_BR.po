@@ -21,7 +21,7 @@ msgstr "Tijmen Smit"
 
 #. Description of the plugin/theme
 msgid "An easy to use location management system that enables users to search for nearby physical stores"
-msgstr "Um sistema de gerenciamento de localização fácil de usar que permite aos usuários pesquisar lojas físicas próximas"
+msgstr "Um sistema de gerenciamento de localização fácil de usar que permite aos usuários pesquisar locais físicas próximas"
 
 #. Plugin Name of the plugin/theme
 msgid "WP Store Locator"
@@ -97,7 +97,7 @@ msgstr "Segunda"
 
 #: inc/wpsl-functions.php:184
 msgid "Show the store list below the map"
-msgstr "Mostre a lista de lojas abaixo do mapa"
+msgstr "Mostre a lista de locais abaixo do mapa"
 
 #: inc/class-post-types.php:165
 msgid "Zip"
@@ -105,47 +105,47 @@ msgstr "CEP"
 
 #: inc/class-post-types.php:147
 msgid "Enter store title here"
-msgstr "Informe o título da loja aqui"
+msgstr "Informe o título do Local aqui"
 
 #: inc/class-post-types.php:116
 msgid "New Store Category Name"
-msgstr "Nome da nova categoria de loja"
+msgstr "Nome da nova categoria"
 
 #: inc/class-post-types.php:115
 msgid "Add New Store Category"
-msgstr "Adicionar nova categoria de loja"
+msgstr "Adicionar nova categoria"
 
 #: inc/class-post-types.php:114
 msgid "Update Store Category"
-msgstr "Atualizar categoria de loja"
+msgstr "Atualizar categoria"
 
 #: inc/class-post-types.php:113
 msgid "Edit Store Category"
-msgstr "Editar categoria de loja"
+msgstr "Editar categoria"
 
 #: inc/class-post-types.php:112
 msgid "Parent Store Category:"
-msgstr "Categoria de loja ascendente:"
+msgstr "Categoria ascendente:"
 
 #: inc/class-post-types.php:111
 msgid "Parent Store Category"
-msgstr "Categoria de loja ascendente"
+msgstr "Categoria ascendente"
 
 #: inc/class-post-types.php:110
 msgid "All Store Categories"
-msgstr "Todas as categorias de loja"
+msgstr "Todas as categorias"
 
 #: inc/class-post-types.php:109
 msgid "Search Store Categories"
-msgstr "Pesquisar categorias de loja"
+msgstr "Pesquisar categorias"
 
 #: inc/class-post-types.php:108
 msgid "Store Category"
-msgstr "Categoria de loja"
+msgstr "Categoria"
 
 #: inc/class-post-types.php:107 inc/class-post-types.php:117
 msgid "Store Categories"
-msgstr "Categorias de loja"
+msgstr "Categorias"
 
 #: inc/class-post-types.php:65
 msgid "No %s found in trash"
@@ -181,11 +181,11 @@ msgstr "Tudo %s"
 
 #: inc/class-post-types.php:55
 msgid "Store Locator"
-msgstr "Localizador da Loja"
+msgstr "Localizador do Local"
 
 #: inc/class-post-types.php:51
 msgid "Stores"
-msgstr "Lojas"
+msgstr "locais"
 
 #: inc/class-post-types.php:50
 msgid "Store"
@@ -218,19 +218,19 @@ msgstr "Qualquer"
 
 #: frontend/class-frontend.php:761
 msgid "If you use the [wpsl_map] shortcode outside a store page you need to set the ID attribute."
-msgstr "Se você usar o shortcode [wpsl_map] fora da página da loja, você deve definir o atributo ID."
+msgstr "Se você usar o shortcode [wpsl_map] fora da página do Local, você deve definir o atributo ID."
 
 #: frontend/class-frontend.php:712
 msgid "If you use the [wpsl_hours] shortcode outside a store page you need to set the ID attribute."
-msgstr "Se você usar o shortcode [wpsl_hours] fora da página da loja, você deve definir o atributo ID."
+msgstr "Se você usar o shortcode [wpsl_hours] fora da página do Local, você deve definir o atributo ID."
 
 #: frontend/class-frontend.php:601
 msgid "If you use the [wpsl_address] shortcode outside a store page you need to set the ID attribute."
-msgstr "Se você usar o shortcode [wpsl_address] fora da página da loja, você deve definir o atributo ID."
+msgstr "Se você usar o shortcode [wpsl_address] fora da página do Local, você deve definir o atributo ID."
 
 #: admin/upgrade.php:539
 msgid "All the store locations are now converted to custom post types. %s You can view them on the %sAll Stores%s page."
-msgstr "Todas as localizações da loja agora estão convertidas em tipos de post personalizados. %s Você pode vê-los na página %sTodas as lojas%s."
+msgstr "Todas as localizações do Local agora estão convertidas em tipos de post personalizados. %s Você pode vê-los na página %sTodas as locais%s."
 
 #: admin/upgrade.php:417
 msgid "Start Converting"
@@ -238,7 +238,7 @@ msgstr "Iniciar a conversão"
 
 #: admin/upgrade.php:415
 msgid "Store locations to convert:"
-msgstr "Localizações de lojas para converter:"
+msgstr "Localizações de locais para converter:"
 
 #: admin/upgrade.php:394
 msgid "The script converting the locations timed out. %s You can click the \"Start Converting\" button again to restart the script. %s If there are thousands of store locations left to convert and you keep seeing this message, then you can try to contact your host and ask if they can increase the maximum execution time. %s The plugin tried to disable the maximum execution time, but if you are reading this then that failed."
@@ -254,7 +254,7 @@ msgstr "cat-loja"
 
 #: admin/upgrade.php:186 inc/wpsl-functions.php:90
 msgid "stores"
-msgstr "lojas"
+msgstr "locais"
 
 #: admin/upgrade.php:92
 msgid "Reset"
@@ -415,7 +415,7 @@ msgstr "Slug da categoria"
 
 #: admin/templates/map-settings.php:349
 msgid "Store slug"
-msgstr "Slug da loja"
+msgstr "Slug do Local"
 
 #: admin/templates/map-settings.php:345
 msgid "Enable permalink?"
@@ -603,7 +603,7 @@ msgstr "Largura máxima para o conteúdo da janela de informações"
 
 #: admin/templates/map-settings.php:176
 msgid "Store Locator height"
-msgstr "Altura do localizador de lojas"
+msgstr "Altura do localizador de locais"
 
 #: admin/templates/map-settings.php:173
 msgid "User Experience"
@@ -821,7 +821,7 @@ msgstr "Na janela de informações do mapa"
 
 #: admin/class-settings.php:954
 msgid "In the store listings"
-msgstr "Nos anúncios de loja"
+msgstr "Nos anúncios"
 
 #: admin/class-settings.php:946
 msgid "Does not respond"
@@ -845,7 +845,7 @@ msgstr "Área de texto"
 
 #: admin/class-settings.php:854
 msgid "Store location marker"
-msgstr "Marcador do local da loja"
+msgstr "Marcador do local do Local"
 
 #: admin/class-settings.php:852
 msgid "Start location marker"
@@ -1930,7 +1930,7 @@ msgstr ""
 
 #: admin/class-metaboxes.php:862
 msgid "Preview store"
-msgstr "Prévia da loja"
+msgstr "Prévia do Local"
 
 #: admin/class-metaboxes.php:856
 msgid "View store"
@@ -1990,7 +1990,7 @@ msgstr "Prévia do Local"
 
 #: admin/class-metaboxes.php:681
 msgid "Failed to publish the store. Please fill in the required store details."
-msgstr "Falha ao publicar a loja. Preencha os detalhes da loja necessários."
+msgstr "Falha ao publicar a loja. Preencha os detalhes do Local necessários."
 
 #: admin/class-metaboxes.php:434
 msgid "Opening Periods"
@@ -2081,11 +2081,11 @@ msgstr "Local"
 
 #: admin/class-metaboxes.php:34
 msgid "Store Map"
-msgstr "Mapa da Loja"
+msgstr "Mapa do Local"
 
 #: admin/class-metaboxes.php:33
 msgid "Store Details"
-msgstr "Detalhes da Loja"
+msgstr "Detalhes do Local"
 
 #: admin/class-geocode.php:79 admin/class-geocode.php:105
 msgid "The Google Geocoding API failed to return valid data, please try again later."

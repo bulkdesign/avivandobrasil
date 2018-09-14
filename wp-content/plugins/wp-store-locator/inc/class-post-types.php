@@ -101,17 +101,17 @@ if ( !class_exists( 'WPSL_Post_Types' ) ) {
             }
 
             $labels = array(
-				'name'              => __( 'Store Categories', 'wpsl' ),
-				'singular_name'     => __( 'Store Category', 'wpsl' ),
-				'search_items'      => __( 'Search Store Categories', 'wpsl' ),
-				'all_items'         => __( 'All Store Categories', 'wpsl' ),
-				'parent_item'       => __( 'Parent Store Category', 'wpsl' ),
-				'parent_item_colon' => __( 'Parent Store Category:', 'wpsl' ),
-				'edit_item'         => __( 'Edit Store Category', 'wpsl' ),
-				'update_item'       => __( 'Update Store Category', 'wpsl' ),
-				'add_new_item'      => __( 'Add New Store Category', 'wpsl' ),
-				'new_item_name'     => __( 'New Store Category Name', 'wpsl' ),
-				'menu_name'         => __( 'Store Categories', 'wpsl' ),
+				'name'              => __( 'Categorias de Locais', 'wpsl' ),
+				'singular_name'     => __( 'Categoria de Local', 'wpsl' ),
+				'search_items'      => __( 'Buscar Categorias', 'wpsl' ),
+				'all_items'         => __( 'Todas as Categorias', 'wpsl' ),
+				'parent_item'       => __( 'Categoria Pai', 'wpsl' ),
+				'parent_item_colon' => __( 'Categoria Pai:', 'wpsl' ),
+				'edit_item'         => __( 'Editar Categoria', 'wpsl' ),
+				'update_item'       => __( 'Atualizar Categoria', 'wpsl' ),
+				'add_new_item'      => __( 'Adicionar Categoria', 'wpsl' ),
+				'new_item_name'     => __( 'Nova Categoria', 'wpsl' ),
+				'menu_name'         => __( 'Categorias de Locais', 'wpsl' ),
 			);
                         
             $args = apply_filters( 'wpsl_store_category_args', array(
