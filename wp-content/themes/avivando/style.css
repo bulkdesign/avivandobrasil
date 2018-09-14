@@ -141,15 +141,15 @@ form {
 }
 
 .amarelo {
-	background-color: #FBC643;
+	background-color: #FBC643 !important;
 }
 
 .not-so-black {
-	background-color: #191919;
+	background-color: #191919 !important;
 }
 
 .almost-black {
-	background-color: #111111;
+	background-color: #111111 !important;
 }
 
 /* CORES FONTES */
@@ -211,6 +211,11 @@ i.tiny {
     letter-spacing: 3px;
     font-size: 13px;
     font-weight: bold;
+}
+
+.btn-amarelo {
+	background: #FBC643 !important;
+	color: rgba(0, 0, 0, 0.8) !important;
 }
 
 .btn-destaque:hover, .searchandfilter input[type="submit"]:hover {

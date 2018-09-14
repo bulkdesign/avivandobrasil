@@ -32,13 +32,14 @@
         <div class="col hide-on-med-and-down l4 right margin20 padding40">
           <p class="white-text bold right-align">MENU DE NAVEGAÇÃO</p>
           <ul class="right-align links-rodape">
-            <li><a href="/">HOME</li>
-            <li><a href="/#oquee">IGREJAS</li>
-            <li><a href="/#paraqueserve">CULTOS ONLINE</li>
-            <li><a href="/como-comprar">EVENTOS</li>
-            <li><a href="/medicos">TREINAMENTOS</li>
-            <li><a href="/produtos">SOBRE</li>
-            <li><a href="/contato">CONTATO</li>
+            <li><a href="<?php echo site_url(); ?>">HOME</li>
+            <li><a href="<?php echo site_url(); ?>/igrejas">IGREJAS</li>
+            <li><a href="<?php echo site_url(); ?>/cultos-online">CULTOS ONLINE</li>
+            <li><a href="<?php echo site_url(); ?>/eventos">EVENTOS</li>
+            <li><a href="<?php echo site_url(); ?>/treinamentos">TREINAMENTOS</li>
+            <li><a href="<?php echo site_url(); ?>/sobre">SOBRE</li>
+            <li><a href="<?php echo site_url(); ?>/contato">CONTATO</li>
+            <li><a href="<?php echo site_url(); ?>/anuncie">ANUNCIE</li>
           </ul>
         </div>
       </div>
@@ -50,7 +51,6 @@
     <div class="row">
           <div class="col s12 padding20">
             <h3 class="white-text">Avivando Brasil</h3>
-            <a href="/termos-de-uso">Termos de Uso</a> | <a href="/politica-de-privacidade">Política de Privacidade</a> | <a href="/politica-de-devolucao">Política de Devolução</a>
           </div>
     </div>
   </div>

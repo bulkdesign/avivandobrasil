@@ -90,28 +90,28 @@
 											<img class="left paddingr5" width="24" class="image-center" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/facebook.png" />
 										</a>
 										<?php else: ?>
-											<span></span>
+											<span>-</span>
 									<?php endif; ?>
 									<?php if(get_field('instagram')): ?>
 										<a href="<?php echo the_field('instagram'); ?>">
 											<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/instagram.png" /> 
 										</a>
 										<?php else: ?>
-											<span></span>
+											<span>-</span>
 									<?php endif; ?>
 									<?php if(get_field('whatsapp')): ?>
 										<a href="https://api.whatsapp.com/send?phone=55<?php echo the_field('whatsapp'); ?>">
 											<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/whatsapp.png" /> 
 										</a>
 										<?php else: ?>
-											<span></span>
+											<span>-</span>
 									<?php endif; ?>
 									<?php if(get_field('youtube')): ?>
 										<a href="<?php echo the_field('youtube'); ?>">
 											<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/youtube.png" /> 
 										</a>
 										<?php else: ?>
-											<span></span>
+											<span>-</span>
 									<?php endif; ?>
 								</td>
 							</tr>

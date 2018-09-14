@@ -26,8 +26,9 @@
 <div class="hide-on-small-only parallax-container" style="height: 750px">
   <div class="icones-inicio">
     <div class="row">
-      <div class="col s12">
-        <img src="<?php bloginfo('template_url'); ?>/images/icons.png" />
+      <div class="col s10 push-s1">
+        <h1 class="bold white-text" style="font-size: 50px">O SEU GPS PARA ENCONTRAR IGREJAS E EVENTOS GOSPEL EM TODO O BRASIL!</h1>
+        <a href="#igrejas" class="btn btn-destaque btn-amarelo animated infinite pulse">VER IGREJAS MAIS PRÓXIMAS</a>
       </div>
     </div>
   </div>
@@ -41,7 +42,8 @@
     <div class="row">
       <!-- DESKTOP -->
       <div class="col s8 push-s2 margin50 marginb50">
-        <h1 class="white-text bold">Unidade + Jesus = <span class="texto-amarelo">Avivando</span></h1>
+        <img style="width: 600px" class="image-center" src="<?php bloginfo('template_url'); ?>/images/icons.png" />
+        <h1 class="margin50 white-text bold">Unidade + Jesus = <span class="texto-amarelo">Avivando</span></h1>
         <h3 class="white-text">Nós cremos que através da unidade da igreja de Cristo nesta terra + um genuíno reconhecimento de nossa identidade e do sacrifício de Jesus na cruz será gerado um avivamento e um despertar de cada um de nós. Avivar é você tornar-se mais vivo, animar-se, avigorar-se, reanimar seu espírito. E para isso é necessário estar ligado à videira verdadeira e produzir frutos. É para isso que o Avivando Brasil foi criado, para te ajudar a manter a chama acesa e contagiar outros.</h3>
       </div>
     </div>
@@ -65,8 +67,6 @@
           Quais serão os dias e horários? Quanto é a inscrição?<br>
           Com o Avivando Brasil você por dentro de tudo!
         </h3>
-        <br>
-        <a href="#" class="btn btn-destaque texto-amarelo">BUSCAR IGREJAS PRÓXIMAS</a>
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@
   </div>
 </div>
 <!-- ENCONTRE AS IGREJAS -->
-<div class="hide-on-small-only parallax-container" style="height: 750px">
+<div id="igrejas" class="hide-on-small-only parallax-container" style="height: 750px">
   <div class="container">
     <div class="row">
       <div class="col s8 push-s2 margin50">
@@ -115,7 +115,7 @@
           else { echo "Não há eventos."; } ?>
       </div>
       <div class="col s12 margin50 marginb50">
-        <a href="#" class="btn btn-destaque texto-amarelo">Ver todos os Eventos</a>
+        <a href="<?php echo site_url(); ?>/eventos" class="btn btn-destaque texto-amarelo">Ver todos os Eventos</a>
       </div>
     </div>
   </div>

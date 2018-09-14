@@ -45,7 +45,7 @@
     <?php echo do_shortcode('[searchandfilter search_placeholder="Busque aqui..." submit_label="Buscar" fields="search,wpsl_store_category,denominacao" hide_empty="0" hierarchical="1" class="form"]'); ?>
   </div>
   <div class="col s12 m10 push-m1 marginb50">
-    <?php $igrejas = new WP_Query( array( 'post_type' => 'wpsl_stores' )); ?>
+    <?php $igrejas = new WP_Query( array( 'post_type' => 'wpsl_stores', 'wpsl_store_category' => 'igreja' )); ?>
       <?php while ( $igrejas->have_posts() ) : $igrejas->the_post(); ?>
         <div class="col s12 m4">
           <a href="<?php echo the_permalink(); ?>">

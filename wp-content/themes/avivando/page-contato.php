@@ -7,6 +7,7 @@ input[type=submit] {
   background-color: #72936F !important;
   color: #FFFFFF !important;
   padding: 0 25px;
+  border-radius: 4px;
 }
 
 textarea, input:not([type]), input[type=text]:not(.browser-default), input[type=email]:not(.browser-default), input[type=tel]:not(.browser-default), textarea.materialize-textarea {
@@ -46,7 +47,7 @@ textarea, textarea:hover, textarea:active {
   
 .contato {
   width:100%;
-  height:300px;
+  height:500px;
   text-align:center;
   display:flex;
   justify-content:center;
@@ -65,16 +66,15 @@ textarea, textarea:hover, textarea:active {
   <h1 class="white-text bold">Contato</h1>
 </div>
 
-<?php $contato = new WP_Query( array( 'post_type' => 'textos_contato', 'posts_per_page' => '1' )); ?>
-<?php while ( $contato->have_posts() ) : $contato->the_post(); ?>
 <div class="container margin50 marginb50">
 	<div class="row">
     <div class="col s12">
       <div class="col s12 m6">
         <h1 class="left-align">Localização</h1>
-        <h3 class="left-align"><?php the_field('nome_da_empresa'); ?></h3>
-        <?php the_field('informacoes'); ?>
-        <?php echo get_field('mapa'); ?>
+        <h3 class="left-align">Avivando Brasil</h3>
+        <p class="left-align">Telefone: (41) 99206-1229<br>
+        Endereço: Rua de Exemplo, 12 - Santa Felicidade - Curitiba/PR</p>
+        <iframe class="margin10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.0226080089706!2d-49.30078858470264!3d-25.437507683785057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3ec88fc91f9%3A0x81262e1586c37708!2sR.+Jos%C3%A9+Domakoski%2C+124-246+-+Bigorrilho%2C+Curitiba+-+PR%2C+80730-140!5e0!3m2!1sen!2sbr!4v1536912305037" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
   		</div>
       <div class="col s12 m6">
         <h1>Formulário</h1>
@@ -83,7 +83,5 @@ textarea, textarea:hover, textarea:active {
       </div>
   </div>
 </div>
-<?php endwhile; ?>
-<?php wp_reset_query(); ?>
 
-<?php get_footer('home'); ?>
+<?php get_footer(); ?>
