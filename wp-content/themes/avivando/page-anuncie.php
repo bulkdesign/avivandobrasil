@@ -10,7 +10,7 @@
   
 .anuncie {
   width:100%;
-  height:500px;
+  height:300px;
   text-align:center;
   display:flex;
   justify-content:center;
@@ -25,7 +25,10 @@
 </style>
 
 <!-- TOPO -->
-<div class="anuncie" style="background: url('<?php bloginfo('template_url'); ?>/images/anuncie.jpg');background-position:0 -200px;background-size:cover;background-repeat: no-repeat;">
+<div class="anuncie hide-on-small-only" style="background: url('<?php bloginfo('template_url'); ?>/images/anuncie.jpg');background-position:0 -200px;background-size:cover;background-repeat: no-repeat;">
+  <h1 class="white-text bold"><?php the_title(); ?></h1>
+</div>
+<div class="anuncie hide-on-med-and-up" style="background: url('<?php bloginfo('template_url'); ?>/images/anuncie.jpg');background-position:0 0;background-size:cover;background-repeat: no-repeat;">
   <h1 class="white-text bold"><?php the_title(); ?></h1>
 </div>
 

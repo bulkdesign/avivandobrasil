@@ -7,35 +7,14 @@
   max-width: 100%;
   padding: 0;
 }
-  
-.igrejas {
-  width:100%;
-  height:500px;
-  text-align:center;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.igrejas h1 {
-  font-size: 50px;
-  padding: 10px 10px 0;
-  margin: 0;
-}
-
-#mapa {
-  height: auto;
-  padding: 50px 0px;
-}
-
-#mapa h1 {
-  margin: 20px 0 30px;
-}
 
 </style>
 
 <!-- TOPO -->
-<div class="igrejas" style="background: url('<?php bloginfo('template_url'); ?>/images/sobre.jpg');background-size:cover;background-position:0 -250px;background-repeat: no-repeat;">
+<div class="igrejas hide-on-small-only" style="background: url('<?php bloginfo('template_url'); ?>/images/sobre.jpg');background-size:cover;background-position:0 -250px;background-repeat: no-repeat;">
+  <h1 class="white-text bold"><?php the_title(); ?></h1>
+</div>
+<div class="igrejas hide-on-med-and-up" style="background: url('<?php bloginfo('template_url'); ?>/images/sobre.jpg');background-size:cover;background-position:0 0;background-repeat: no-repeat;">
   <h1 class="white-text bold"><?php the_title(); ?></h1>
 </div>
 

@@ -157,7 +157,7 @@ get_header(); ?>
 						<!-- Localizacao -->
 						<h3 class="bold">Localização</h3>
 						<?php echo do_shortcode('[wpsl_map id=' . get_the_id() . ' zoom="17"]'); ?>
-						<table class="center">
+						<table class="center hide-on-med-and-down">
 							<thead style="background:#F2F2F2">
 								<tr>
 									<th class="center">Endereço</th>
@@ -183,9 +183,43 @@ get_header(); ?>
 								</tr>
 							</tbody>
 						</table>
+						<table class="center hide-on-large-only">
+							<!-- ENDERECO -->
+							<tr>
+								<th class="center">Endereço</th>
+							</tr>
+							<tr>
+								<td class="center">
+									<?php echo do_shortcode('[wpsl_address id=' . get_the_id() . ' name="false" address="true" address2="false" city="false" state="false" zip="false" country="false" phone="false" fax="false" email="false" url="false"]'); ?>
+								</td>
+							</tr>
+							<!-- CEP -->
+							<tr>
+								<th class="center">CEP</th>
+							</tr>
+							<tr>
+								<td class="center">
+									<?php echo do_shortcode('[wpsl_address id=' . get_the_id() . ' name="false" address="false" address2="false" city="false" state="false" zip="true" country="false" phone="false" fax="false" email="false" url="false"]'); ?>
+								</td>
+							</tr>
+							<!-- CIDADE -->
+							<tr>
+								<th class="center">Cidade</th>
+							</tr>
+							<td class="center">
+								<?php echo do_shortcode('[wpsl_address id=' . get_the_id() . ' name="false" address="false" address2="false" city="true" state="false" zip="false" country="false" phone="false" fax="false" email="false" url="false"]'); ?>
+							</td>
+							<!-- ESTADO -->
+							<tr>
+								<th class="center">Estado</th>
+							</tr>
+							<td class="center">
+								<?php echo do_shortcode('[wpsl_address id=' . get_the_id() . ' name="false" address="false" address2="false" city="false" state="true" zip="false" country="false" phone="false" fax="false" email="false" url="false"]'); ?>
+							</td>
+						</table>
 						<!-- Conveniências -->
 						<h3 class="bold">Conveniências</h3>
-						<table class="center">
+						<table class="center hide-on-med-and-down">
 							<thead style="background:#F2F2F2">
 								<tr>
 									<?php if(get_field('culto_ao_vivo')): ?>
@@ -245,10 +279,72 @@ get_header(); ?>
 								</tr>
 							</tbody>
 						</table>
+						<table class="center hide-on-large-only">
+							<!-- CULTO AO VIVO -->
+							<?php if(get_field('culto_ao_vivo')): ?>
+								<tr>
+									<th class="center">Culto ao Vivo</th>
+								</tr>
+								<tr>
+									<td class="center">
+										<a target="blank" href="<?php the_field('culto_ao_vivo'); ?>">Clique aqui</a>
+									</td>
+								</tr>
+								<?php else: ?>
+							<?php endif; ?>
+							<!-- ESTACIONAMENTO -->
+							<?php if(get_field('possui_estacionamento')): ?>
+								<tr>
+									<th class="center">Possui Estacionamento</th>
+								</tr>
+								<tr>
+									<td class="center">
+										<?php the_field('possui_estacionamento'); ?>
+									</td>
+								</tr>
+								<?php else: ?>
+							<?php endif; ?>
+							<!-- ATIVIDADES -->
+							<?php if(get_field('atividades_criancas')): ?>
+								<tr>
+									<th class="center">Atividades para Crianças</th>
+								</tr>
+								<tr>
+									<td class="center">
+										<?php the_field('atividades_criancas'); ?>
+									</td>
+								</tr>
+								<?php else: ?>
+							<?php endif; ?>	
+							<!-- AR CONDICIONADO -->
+							<?php if(get_field('arcondicionado')): ?>
+								<tr>
+									<th class="center">Ar Condicionado</th>
+								</tr>
+								<tr>
+									<td class="center">
+										<?php the_field('arcondicionado'); ?>
+									</td>
+								</tr>
+								<?php else: ?>
+							<?php endif; ?>
+							<!-- ACESSIBILIDADE -->
+							<?php if(get_field('acessibilidade')): ?>
+								<tr>
+									<th class="center">Acessibilidade</th>
+								</tr>
+								<tr>
+									<td class="center">
+										<?php the_field('acessibilidade'); ?>
+									</td>
+								</tr>
+								<?php else: ?>
+							<?php endif; ?>			
+						</table>
 						<!-- Agenda da Igreja -->
 						<?php if(get_field('domingo')): ?>
 							<h3 class="bold">Programação de Cultos</h3>
-							<table class="center">
+							<table class="center hide-on-med-and-down">
 								<thead style="background:#F2F2F2">
 									<tr>
 										<?php if(get_field('segunda')): ?>
@@ -327,6 +423,92 @@ get_header(); ?>
 										</td>									
 									</tr>
 								</tbody>
+							</table>
+							<table class="center hide-on-large-only">
+								<!-- SEGUNDA -->
+								<?php if(get_field('segunda')): ?>
+									<tr>
+										<th class="center">Segunda-feira</th>
+									</tr>
+									<tr>
+										<td class="center">
+											<?php the_field('segunda'); ?>
+										</td>
+									</tr>
+									<?php else: ?>
+								<?php endif; ?>
+								<!-- TERCA -->
+								<?php if(get_field('terca')): ?>
+									<tr>
+										<th class="center">Terça-feira</th>
+									</tr>
+									<tr>
+										<td class="center">
+											<?php the_field('terca'); ?>
+										</td>
+									</tr>
+									<?php else: ?>
+								<?php endif; ?>
+								<!-- QUARTA -->
+								<?php if(get_field('quarta')): ?>
+									<tr>
+										<th class="center">Quarta-feira</th>
+									</tr>
+									<tr>
+										<td class="center">
+											<?php the_field('quarta'); ?>
+										</td>
+									</tr>
+									<?php else: ?>
+								<?php endif; ?>	
+								<!-- QUINTA -->
+								<?php if(get_field('quinta')): ?>
+									<tr>
+										<th class="center">Quinta-feira</th>
+									</tr>
+									<tr>
+										<td class="center">
+											<?php the_field('quinta'); ?>
+										</td>
+									</tr>
+									<?php else: ?>
+								<?php endif; ?>
+								<!-- SEXTA -->
+								<?php if(get_field('sexta')): ?>
+									<tr>
+										<th class="center">Sexta</th>
+									</tr>
+									<tr>
+										<td class="center">
+											<?php the_field('sexta'); ?>
+										</td>
+									</tr>
+									<?php else: ?>
+								<?php endif; ?>
+								<!-- SABADO -->
+								<?php if(get_field('sabado')): ?>
+									<tr>
+										<th class="center">Sábado</th>
+									</tr>
+									<tr>
+										<td class="center">
+											<?php the_field('sabado'); ?>
+										</td>
+									</tr>
+									<?php else: ?>
+								<?php endif; ?>
+								<!-- DOMINGO -->
+								<?php if(get_field('domingo')): ?>
+									<tr>
+										<th class="center">Domingo</th>
+									</tr>
+									<tr>
+										<td class="center">
+											<?php the_field('domingo'); ?>
+										</td>
+									</tr>
+									<?php else: ?>
+								<?php endif; ?>				
 							</table>
 							<?php else: ?>
 						<?php endif; ?>

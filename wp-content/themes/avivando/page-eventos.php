@@ -11,7 +11,10 @@
 </style>
 
 <!-- TOPO -->
-<div class="igrejas" style="background: url('<?php bloginfo('template_url'); ?>/images/eventos.jpg');background-size:cover;background-position:0 -250px;background-repeat: no-repeat;">
+<div class="igrejas hide-on-small-only" style="background: url('<?php bloginfo('template_url'); ?>/images/eventos.jpg');background-size:cover;background-position:0 -250px;background-repeat: no-repeat;">
+  <h1 class="white-text bold"><?php the_title(); ?></h1>
+</div>
+<div class="igrejas hide-on-med-and-up" style="background: url('<?php bloginfo('template_url'); ?>/images/eventos.jpg');background-size:cover;background-position:0 0;background-repeat: no-repeat;">
   <h1 class="white-text bold"><?php the_title(); ?></h1>
 </div>
 

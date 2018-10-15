@@ -49,9 +49,9 @@
 						<div class="col s9">
 							<?php storefront_site_title_or_logo(); ?>
 						</div>
-						<div class="col s1 right">
+						<div class="col s2 right">
 							<main class="hide-on-large-only">
-								<a class="black-text toggle-overlay"><i class="small material-icons">menu</i></a>
+								<a class="white-text toggle-overlay"><i class="small material-icons">menu</i></a>
 							</main>	
 
 							<aside>

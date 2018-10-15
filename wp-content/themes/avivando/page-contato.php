@@ -47,7 +47,7 @@ textarea, textarea:hover, textarea:active {
   
 .contato {
   width:100%;
-  height:500px;
+  height:300px;
   text-align:center;
   display:flex;
   justify-content:center;

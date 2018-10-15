@@ -36,6 +36,19 @@
     <img src="<?php bloginfo('template_url'); ?>/images/background.jpg" />
   </div>
 </div>
+<div class="hide-on-med-and-up parallax-container" style="height: 350px">
+  <div class="icones-inicio" style="margin-top: 30%;">
+    <div class="row">
+      <div class="col s10 push-s1">
+        <h1 class="bold white-text" style="font-size: 24px">O SEU GPS PARA ENCONTRAR IGREJAS E EVENTOS GOSPEL EM TODO O BRASIL!</h1>
+        <a href="#igrejas" class="btn btn-destaque btn-amarelo animated infinite pulse fs12">VER IGREJAS PRÓXIMAS</a>
+      </div>
+    </div>
+  </div>
+  <div class="parallax">
+    <img src="<?php bloginfo('template_url'); ?>/images/background.jpg" />
+  </div>
+</div>
 <!-- O QUE É -->
 <div id="oquee" class="parallax-container not-so-black z-depth-4 hauto">
   <div class="container">
@@ -90,8 +103,52 @@
     </div>
   </div>
 </div>
+<div id="igrejas" class="hide-on-med-and-up parallax-container" style="height: 700px">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 margin30">
+        <h1 class="padding40 texto-escuro bold">Encontre as Igrejas mais próximas:</h1>
+      </div>
+      <div class="col s12 m12">
+        <?php echo do_shortcode('[wpsl]'); ?>
+        <a href="<?php echo site_url(); ?>/igrejas" class="btn btn-destaque texto-amarelo">Ver todas as Igrejas</a>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- PRÓXIMOS EVENTOS -->
-<div class="grey lighten-2" style="height: 850px">
+<div class="grey lighten-2 hide-on-small-only" style="height: 850px">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 margin70 marginb50">
+        <h1 class="padding20 texto-escuro bold">Próximos Eventos:</h1>
+        <h3 class="texto-menos-escuro fs25">Veja abaixo os principais eventos que acontecerão nos próximos dias:</h3>
+      </div>
+      <div class="col s12">
+        <?php $eventos = array('post_type' => 'tp_event', 'posts_per_page' => 3, 'post_status' => 'publish');
+          $listadeeventos = new WP_Query( $eventos );
+            if ( $listadeeventos->have_posts() ) {
+              while ( $listadeeventos->have_posts() ) : $listadeeventos->the_post(); ?>
+                <div class="col s12 m4">
+                  <div class="container-evento">
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                      <?php the_post_thumbnail('medium', array('class' => 'image-center hoverable')); ?>
+                    </a>
+                    <h3 class="bold paddingt15 paddingb0"><?php the_title(); ?></h3>
+                    <?php the_excerpt(); ?>
+                  </div>
+                  <a href="<?php the_permalink(); ?>" class="btn btn-destaque margin10 grey-text">Mais informações</a>
+                </div>
+            <?php endwhile; }
+          else { echo "Não há eventos."; } ?>
+      </div>
+      <div class="col s12 margin50 marginb50">
+        <a href="<?php echo site_url(); ?>/eventos" class="btn btn-destaque texto-amarelo">Ver todos os Eventos</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="grey lighten-2 hide-on-med-and-up" style="height: auto">
   <div class="container">
     <div class="row">
       <div class="col s12 margin70 marginb50">

@@ -11,7 +11,10 @@
 </style>
 
 <!-- TOPO -->
-<div class="igrejas" style="background: url('https://images.unsplash.com/photo-1514430700556-1807904774e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cbb22861b82b9b633c01a3a36a1b428c&auto=format&fit=crop&w=1200&q=80');background-size:cover;background-position:0 -250px;background-repeat: no-repeat;">
+<div class="igrejas hide-on-small-only" style="background: url('https://images.unsplash.com/photo-1514430700556-1807904774e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cbb22861b82b9b633c01a3a36a1b428c&auto=format&fit=crop&w=1200&q=80');background-size:cover;background-position:0 -250px;background-repeat: no-repeat;">
+  <h1 class="white-text bold"><?php the_title(); ?></h1>
+</div>
+<div class="igrejas hide-on-med-and-up" style="background: url('https://images.unsplash.com/photo-1514430700556-1807904774e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cbb22861b82b9b633c01a3a36a1b428c&auto=format&fit=crop&w=1200&q=80');background-size:cover;background-position:0 0;background-repeat: no-repeat;">
   <h1 class="white-text bold"><?php the_title(); ?></h1>
 </div>
 
