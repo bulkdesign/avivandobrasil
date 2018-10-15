@@ -77,7 +77,7 @@ class WPEMS_Admin_Users extends WP_List_Table {
 
 	// $this->items is empty
 	public function no_items() {
-		_e( 'No users found.', 'wp-events-manager' );
+		_e( 'Nenhum inscrito encontrado.', 'wp-events-manager' );
 	}
 
 	// default columns
@@ -109,10 +109,10 @@ class WPEMS_Admin_Users extends WP_List_Table {
 	public function get_columns() {
 		$columns = array(
 			'cb'            => '<input type="checkbox" />',
-			'user_login'    => __( 'Username', 'wp-events-manager' ),
-			'user_nicename' => __( 'Name', 'wp-events-manager' ),
-			'user_email'    => __( 'Email', 'wp-events-manager' ),
-			'bookings'      => __( 'Event Booking', 'wp-events-manager' )
+			'user_login'    => __( 'Usuário', 'wp-events-manager' ),
+			'user_nicename' => __( 'Nome', 'wp-events-manager' ),
+			'user_email'    => __( 'E-mail', 'wp-events-manager' ),
+			'bookings'      => __( 'Evento inscrito', 'wp-events-manager' )
 		);
 		return $columns;
 	}
@@ -239,7 +239,7 @@ class WPEMS_Admin_Users extends WP_List_Table {
 		?>
         <div class="wrap">
 
-            <h2><?php _e( 'Event Users', 'wp-events-manager' ); ?></h2>
+            <h2><?php _e( 'Inscritos', 'wp-events-manager' ); ?></h2>
 
 			<?php $user_table->prepare_items(); ?>
             <form method="post">

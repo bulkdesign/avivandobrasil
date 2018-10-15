@@ -102,7 +102,7 @@ abstract class WPEMS_Abstract_Payment_Gateway {
 	 */
 	public function completed_process_message() {
 		if ( !tp_event_has_notice( 'success' ) ) {
-			tp_event_has_notice( 'success', __( 'Payment completed. We will send you email when payment method verify.', 'wp-events-manager' ) );
+			tp_event_has_notice( 'success', __( 'Pagamento concluído. Nós te enviaremos um e-mail quando tivermos a confirmação.', 'wp-events-manager' ) );
 		}
 	}
 

@@ -43,10 +43,10 @@ $prefix  = 'tp_event_';
             <thead>
             <tr>
                 <th><?php _e( 'Item', 'wp-events-manager' ); ?></th>
-                <th><?php _e( 'Cost', 'wp-events-manager' ); ?></th>
-                <th><?php _e( 'Quantity', 'wp-events-manager' ); ?></th>
-                <th><?php _e( 'Payment Method', 'wp-events-manager' ) ?></th>
-                <th><?php _e( 'Amount', 'wp-events-manager' ); ?></th>
+                <th><?php _e( 'Preço', 'wp-events-manager' ); ?></th>
+                <th><?php _e( 'Quantidade Disponível', 'wp-events-manager' ); ?></th>
+                <th><?php _e( 'Método de Pagamento', 'wp-events-manager' ) ?></th>
+                <th><?php _e( 'Valor', 'wp-events-manager' ); ?></th>
             </tr>
             </thead>
             <tbody>

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header(); ?>
 
 	<div class="col s12 margin140">
-		<?php echo do_shortcode('[searchandfilter search_placeholder="Busque aqui..." submit_label="Buscar" fields="search,wpsl_store_category,denominacao" hide_empty="0" hierarchical="1" class="form"]'); ?>
+		<?php echo do_shortcode('[searchandfilter search_placeholder="Busque aqui..." submit_label="Buscar" fields="search,wpsl_store_category,denominacao,bairro" hide_empty="0" hierarchical="1" class="form"]'); ?>
 	</div>
 
 	<?php if ( have_posts() ) : ?>

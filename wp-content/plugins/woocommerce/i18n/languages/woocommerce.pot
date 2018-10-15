@@ -19710,7 +19710,7 @@ msgstr ""
 #: includes/class-wc-cart.php:1068 includes/class-wc-frontend-scripts.php:546
 #: includes/wc-cart-functions.php:123 includes/wc-template-functions.php:1963
 #. translators: %s: product name
-msgid "View cart"
+msgid "Ver Carrinho"
 msgstr ""
 
 #: includes/class-wc-cart.php:1068

@@ -49,17 +49,17 @@ if ( !class_exists( 'WPSL_Post_Types' ) ) {
 
             // The labels for the wpsl_stores post type.
             $labels = apply_filters( 'wpsl_post_type_labels', array(
-                    'name'               => __( 'Store Locator', 'wpsl' ),
-                    'all_items'          => __( 'All Stores', 'wpsl' ),
-                    'singular_name'      => __( 'Store', 'wpsl' ),
-                    'add_new'            => __( 'New Store', 'wpsl' ),
-                    'add_new_item'       => __( 'Add New Store', 'wpsl' ),
-                    'edit_item'          => __( 'Edit Store', 'wpsl' ),
-                    'new_item'           => __( 'New Store', 'wpsl' ),
-                    'view_item'          => __( 'View Stores', 'wpsl' ),
-                    'search_items'       => __( 'Search Stores', 'wpsl' ),
-                    'not_found'          => __( 'No Stores found', 'wpsl' ),
-                    'not_found_in_trash' => __( 'No Stores found in trash', 'wpsl' ),
+                    'name'               => __( 'Igrejas', 'wpsl' ),
+                    'all_items'          => __( 'Todas as Igrejas', 'wpsl' ),
+                    'singular_name'      => __( 'Igreja', 'wpsl' ),
+                    'add_new'            => __( 'Nova Igreja', 'wpsl' ),
+                    'add_new_item'       => __( 'Adicionar Igreja', 'wpsl' ),
+                    'edit_item'          => __( 'Editar Igreja', 'wpsl' ),
+                    'new_item'           => __( 'Nova Igreja', 'wpsl' ),
+                    'view_item'          => __( 'Ver Igrejas', 'wpsl' ),
+                    'search_items'       => __( 'Buscar Igrejas', 'wpsl' ),
+                    'not_found'          => __( 'Nenhuma Igreja encontrada', 'wpsl' ),
+                    'not_found_in_trash' => __( 'Nenhuma Igreja encontrada na Lixeira', 'wpsl' ),
                 ) 
             );
             

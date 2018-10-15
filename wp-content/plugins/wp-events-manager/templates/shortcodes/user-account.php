@@ -17,12 +17,12 @@ if ( $query->have_posts() ) :
 
     <table>
         <thead>
-        <th><?php _e( 'Booking ID', 'wp-events-manager' ); ?></th>
-        <th><?php _e( 'Events', 'wp-events-manager' ); ?></th>
-        <th><?php _e( 'Type', 'wp-events-manager' ); ?></th>
-        <th><?php _e( 'Cost', 'wp-events-manager' ); ?></th>
-        <th><?php _e( 'Quantity', 'wp-events-manager' ); ?></th>
-        <th><?php _e( 'Method', 'wp-events-manager' ); ?></th>
+        <th><?php _e( 'ID', 'wp-events-manager' ); ?></th>
+        <th><?php _e( 'Evento', 'wp-events-manager' ); ?></th>
+        <th><?php _e( 'Tipo', 'wp-events-manager' ); ?></th>
+        <th><?php _e( 'Preço', 'wp-events-manager' ); ?></th>
+        <th><?php _e( 'Quantidade', 'wp-events-manager' ); ?></th>
+        <th><?php _e( 'Forma de Pagamento', 'wp-events-manager' ); ?></th>
         <th><?php _e( 'Status', 'wp-events-manager' ); ?></th>
         </thead>
         <tbody>
@@ -32,10 +32,10 @@ if ( $query->have_posts() ) :
             <tr>
                 <td><?php printf( '%s', wpems_format_ID( $post->ID ) ) ?></td>
                 <td><?php printf( '<a href="%s">%s</a>', get_the_permalink( $booking->event_id ), get_the_title( $booking->event_id ) ) ?></td>
-                <td><?php printf( '%s', floatval( $booking->price ) == 0 ? __( 'Free', 'wp-events-manager' ) : __( 'Cost', 'wp-events-manager' ) ) ?></td>
+                <td><?php printf( '%s', floatval( $booking->price ) == 0 ? __( 'Gratuito', 'wp-events-manager' ) : __( 'Cost', 'wp-events-manager' ) ) ?></td>
                 <td><?php printf( '%s', wpems_format_price( floatval( $booking->price ), $booking->currency ) ) ?></td>
                 <td><?php printf( '%s', $booking->qty ) ?></td>
-                <td><?php printf( '%s', $booking->payment_id ? wpems_get_payment_title( $booking->payment_id ) : __( 'No payment', 'wp-events-manager' ) ) ?></td>
+                <td><?php printf( '%s', $booking->payment_id ? wpems_get_payment_title( $booking->payment_id ) : __( 'Sem Pagamento', 'wp-events-manager' ) ) ?></td>
                 <th><?php printf( '%s', wpems_booking_status( $booking->ID ) ); ?></th>
             </tr>
 
@@ -53,8 +53,8 @@ if ( $query->have_posts() ) :
 		'end_size'           => 1,
 		'mid_size'           => 2,
 		'prev_next'          => true,
-		'prev_text'          => __( '« Previous', 'wp-events-manager' ),
-		'next_text'          => __( 'Next »', 'wp-events-manager' ),
+		'prev_text'          => __( '« Anterior', 'wp-events-manager' ),
+		'next_text'          => __( 'Próximo »', 'wp-events-manager' ),
 		'type'               => 'plain',
 		'add_args'           => false,
 		'add_fragment'       => '',
@@ -65,8 +65,8 @@ if ( $query->have_posts() ) :
 	echo paginate_links( array(
 		'base'      => str_replace( 9999999, '%#%', esc_url( get_pagenum_link( 9999999 ) ) ),
 		'format'    => '?paged=%#%',
-		'prev_text' => __( '« Previous', 'wp-events-manager' ),
-		'next_text' => __( 'Next »', 'wp-events-manager' ),
+		'prev_text' => __( '« Anterior', 'wp-events-manager' ),
+		'next_text' => __( 'Próximo »', 'wp-events-manager' ),
 		'current'   => max( 1, get_query_var( 'paged' ) ),
 		'total'     => $query->max_num_pages
 	) );

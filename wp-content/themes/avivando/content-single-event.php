@@ -4,20 +4,6 @@
   max-width: 100%;
   padding: 0;
 }
-  
-.destaque-post {
-  width:100%;
-  height:450px;
-  text-align:center;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.destaque-post h1 {
-  font-size:50px;
-  padding:10px 10px 0;
-}
 
 </style>
 
@@ -71,49 +57,79 @@
 					<table class="center">
 						<thead style="background:#F2F2F2">
 							<tr>
-								<th class="center">Produtora do Evento</th>
-								<th class="center">Telefone</th>
-								<th class="center">Site</th>
-								<th class="center">E-mail</th>
-								<th class="center">Redes Sociais</th>
+								<?php if(get_field('produtor_do_evento')): ?>
+									<th class="center">Produtora do Evento</th>
+									<?php else: ?>
+								<?php endif; ?>
+								<?php if(get_field('telefone')): ?>
+									<th class="center">Telefone</th>
+									<?php else: ?>
+								<?php endif; ?>
+								<?php if(get_field('site')): ?>
+									<th class="center">Site</th>
+									<?php else: ?>
+								<?php endif; ?>
+								<?php if(get_field('e-mail')): ?>
+									<th class="center">E-mail</th>
+									<?php else: ?>
+								<?php endif; ?>
+								<?php if(get_field('facebook')): ?>
+									<th class="center">Redes Sociais</th>
+									<?php else: ?>
+								<?php endif; ?>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td class="center"><?php the_field('produtor_do_evento'); ?></td>
-								<td class="center"><?php the_field('telefone'); ?></td>
-								<td class="center"><a href="<?php the_field('site'); ?>">Clique aqui</a></td>
-								<td class="center"><?php the_field('e-mail'); ?></td>
-								<td class="center">
-									<?php if(get_field('facebook')): ?>
-										<a href="<?php echo the_field('facebook'); ?>">
-											<img class="left paddingr5" width="24" class="image-center" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/facebook.png" />
-										</a>
-										<?php else: ?>
-											<span>-</span>
-									<?php endif; ?>
-									<?php if(get_field('instagram')): ?>
-										<a href="<?php echo the_field('instagram'); ?>">
-											<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/instagram.png" /> 
-										</a>
-										<?php else: ?>
-											<span>-</span>
-									<?php endif; ?>
-									<?php if(get_field('whatsapp')): ?>
-										<a href="https://api.whatsapp.com/send?phone=55<?php echo the_field('whatsapp'); ?>">
-											<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/whatsapp.png" /> 
-										</a>
-										<?php else: ?>
-											<span>-</span>
-									<?php endif; ?>
-									<?php if(get_field('youtube')): ?>
-										<a href="<?php echo the_field('youtube'); ?>">
-											<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/youtube.png" /> 
-										</a>
-										<?php else: ?>
-											<span>-</span>
-									<?php endif; ?>
-								</td>
+								<?php if(get_field('produtor_do_evento')): ?>
+									<td class="center"><?php the_field('produtor_do_evento'); ?></td>
+									<?php else: ?>
+								<?php endif; ?>
+								<?php if(get_field('telefone')): ?>
+									<td class="center"><?php the_field('telefone'); ?></td>
+									<?php else: ?>
+								<?php endif; ?>
+								<?php if(get_field('site')): ?>
+									<td class="center"><a href="<?php the_field('site'); ?>">Clique aqui</a></td>
+									<?php else: ?>
+								<?php endif; ?>
+								<?php if(get_field('e-mail')): ?>
+									<td class="center"><?php the_field('e-mail'); ?></td>
+									<?php else: ?>
+								<?php endif; ?>
+								<?php if(get_field('facebook')): ?>
+									<td class="center">
+										<?php if(get_field('facebook')): ?>
+											<a href="<?php echo the_field('facebook'); ?>">
+												<img class="left paddingr5" width="24" class="image-center" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/facebook.png" />
+											</a>
+											<?php else: ?>
+												<span>-</span>
+										<?php endif; ?>
+										<?php if(get_field('instagram')): ?>
+											<a href="<?php echo the_field('instagram'); ?>">
+												<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/instagram.png" /> 
+											</a>
+											<?php else: ?>
+												<span>-</span>
+										<?php endif; ?>
+										<?php if(get_field('whatsapp')): ?>
+											<a href="https://api.whatsapp.com/send?phone=55<?php echo the_field('whatsapp'); ?>">
+												<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/whatsapp.png" /> 
+											</a>
+											<?php else: ?>
+												<span>-</span>
+										<?php endif; ?>
+										<?php if(get_field('youtube')): ?>
+											<a href="<?php echo the_field('youtube'); ?>">
+												<img width="24" class="left paddingr5" src="<?php bloginfo('template_url'); ?>/assets/images/redes-sociais/youtube.png" /> 
+											</a>
+											<?php else: ?>
+												<span>-</span>
+										<?php endif; ?>
+									</td>
+									<?php else: ?>
+								<?php endif; ?>
 							</tr>
 						</tbody>
 					</table>

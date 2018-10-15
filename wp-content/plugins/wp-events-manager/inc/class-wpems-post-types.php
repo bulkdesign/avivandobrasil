@@ -47,25 +47,25 @@ class WPEMS_Custom_Post_Types {
 	public function register_event_post_type() {
 		// post type
 		$labels = array(
-			'name'               => _x( 'Events', 'post type general name', 'wp-events-manager' ),
-			'singular_name'      => _x( 'Event', 'post type singular name', 'wp-events-manager' ),
-			'menu_name'          => _x( 'Events', 'admin menu', 'wp-events-manager' ),
-			'name_admin_bar'     => _x( 'Event', 'add new on admin bar', 'wp-events-manager' ),
-			'add_new'            => _x( 'Add New', 'event', 'wp-events-manager' ),
-			'add_new_item'       => __( 'Add New Event', 'wp-events-manager' ),
-			'new_item'           => __( 'New Event', 'wp-events-manager' ),
-			'edit_item'          => __( 'Edit Event', 'wp-events-manager' ),
-			'view_item'          => __( 'View Event', 'wp-events-manager' ),
-			'all_items'          => __( 'Events', 'wp-events-manager' ),
-			'search_items'       => __( 'Search Events', 'wp-events-manager' ),
+			'name'               => _x( 'Eventos', 'post type general name', 'wp-events-manager' ),
+			'singular_name'      => _x( 'Evento', 'post type singular name', 'wp-events-manager' ),
+			'menu_name'          => _x( 'Eventos', 'admin menu', 'wp-events-manager' ),
+			'name_admin_bar'     => _x( 'Evento', 'add new on admin bar', 'wp-events-manager' ),
+			'add_new'            => _x( 'Adicionar Novo', 'event', 'wp-events-manager' ),
+			'add_new_item'       => __( 'Adicionar Novo Evento', 'wp-events-manager' ),
+			'new_item'           => __( 'Novo Evento', 'wp-events-manager' ),
+			'edit_item'          => __( 'Editar Evento', 'wp-events-manager' ),
+			'view_item'          => __( 'Ver Evento', 'wp-events-manager' ),
+			'all_items'          => __( 'Todos os Eventos', 'wp-events-manager' ),
+			'search_items'       => __( 'Buscar Eventos', 'wp-events-manager' ),
 			'parent_item_colon'  => __( 'Parent Events:', 'wp-events-manager' ),
-			'not_found'          => __( 'No events found.', 'wp-events-manager' ),
-			'not_found_in_trash' => __( 'No events found in Trash.', 'wp-events-manager' )
+			'not_found'          => __( 'Nenhum evento encontrado.', 'wp-events-manager' ),
+			'not_found_in_trash' => __( 'Nenhum evento encontrado na Lixeira.', 'wp-events-manager' )
 		);
 
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __( 'Event post type.', 'wp-events-manager' ),
+			'description'        => __( 'Eventos.', 'wp-events-manager' ),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
@@ -92,25 +92,25 @@ class WPEMS_Custom_Post_Types {
 	public function register_booking_post_type() {
 		// event auth book
 		$labels = array(
-			'name'               => _x( 'Bookings', 'post type general name', 'wp-events-manager' ),
-			'singular_name'      => _x( 'Booking', 'post type singular name', 'wp-events-manager' ),
-			'menu_name'          => _x( 'Bookings', 'admin menu', 'wp-events-manager' ),
-			'name_admin_bar'     => _x( 'Booking', 'add new on admin bar', 'wp-events-manager' ),
-			'add_new'            => _x( 'Add New', 'book', 'wp-events-manager' ),
-			'add_new_item'       => __( 'Add New Booking', 'wp-events-manager' ),
-			'new_item'           => __( 'New Booking', 'wp-events-manager' ),
-			'edit_item'          => __( 'Booking Details', 'wp-events-manager' ),
-			'view_item'          => __( 'View Booking', 'wp-events-manager' ),
-			'all_items'          => __( 'Bookings', 'wp-events-manager' ),
-			'search_items'       => __( 'Search Books', 'wp-events-manager' ),
+			'name'               => _x( 'Inscrições', 'post type general name', 'wp-events-manager' ),
+			'singular_name'      => _x( 'Inscrição', 'post type singular name', 'wp-events-manager' ),
+			'menu_name'          => _x( 'Inscrições', 'admin menu', 'wp-events-manager' ),
+			'name_admin_bar'     => _x( 'Inscrição', 'add new on admin bar', 'wp-events-manager' ),
+			'add_new'            => _x( 'Adicionar Inscrição', 'book', 'wp-events-manager' ),
+			'add_new_item'       => __( 'Adicionar Nova Inscrição', 'wp-events-manager' ),
+			'new_item'           => __( 'Nova Inscrição', 'wp-events-manager' ),
+			'edit_item'          => __( 'Detalhes da Inscrição', 'wp-events-manager' ),
+			'view_item'          => __( 'Ver Inscrição', 'wp-events-manager' ),
+			'all_items'          => __( 'Inscrições', 'wp-events-manager' ),
+			'search_items'       => __( 'Buscar Inscrições', 'wp-events-manager' ),
 			'parent_item_colon'  => __( 'Parent Books:', 'wp-events-manager' ),
-			'not_found'          => __( 'No books found.', 'wp-events-manager' ),
-			'not_found_in_trash' => __( 'No books found in Trash.', 'wp-events-manager' )
+			'not_found'          => __( 'Não há Inscrições.', 'wp-events-manager' ),
+			'not_found_in_trash' => __( 'Não há Inscrições na Lixeira.', 'wp-events-manager' )
 		);
 
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __( 'Description.', 'wp-events-manager' ),
+			'description'        => __( 'Descrição.', 'wp-events-manager' ),
 			'public'             => true,
 			'publicly_queryable' => false,
 			'show_in_admin_bar'  => false,
@@ -139,17 +139,17 @@ class WPEMS_Custom_Post_Types {
 	public function register_event_category_tax() {
 
 		$labels = array(
-			'name'              => _x( 'Event Categories', 'taxonomy general name', 'wp-events-manager' ),
-			'singular_name'     => _x( 'Event Category', 'taxonomy singular name', 'wp-events-manager' ),
-			'search_items'      => __( 'Search Categories', 'wp-events-manager' ),
-			'all_items'         => __( 'All Categories', 'wp-events-manager' ),
+			'name'              => _x( 'Categorias de Evento', 'taxonomy general name', 'wp-events-manager' ),
+			'singular_name'     => _x( 'Categoria do Evento', 'taxonomy singular name', 'wp-events-manager' ),
+			'search_items'      => __( 'Categorias de Evento', 'wp-events-manager' ),
+			'all_items'         => __( 'Todas as Categorias', 'wp-events-manager' ),
 			'parent_item'       => __( 'Parent Category', 'wp-events-manager' ),
 			'parent_item_colon' => __( 'Parent Category:', 'wp-events-manager' ),
-			'edit_item'         => __( 'Edit Category', 'wp-events-manager' ),
-			'update_item'       => __( 'Update Category', 'wp-events-manager' ),
-			'add_new_item'      => __( 'Add New Category', 'wp-events-manager' ),
-			'new_item_name'     => __( 'New Category Name', 'wp-events-manager' ),
-			'menu_name'         => __( 'Category', 'wp-events-manager' ),
+			'edit_item'         => __( 'Editar Categoria', 'wp-events-manager' ),
+			'update_item'       => __( 'Atualizar Categoria', 'wp-events-manager' ),
+			'add_new_item'      => __( 'Adicionar Nova', 'wp-events-manager' ),
+			'new_item_name'     => __( 'Nome da Categoria', 'wp-events-manager' ),
+			'menu_name'         => __( 'Categoria de Evento', 'wp-events-manager' ),
 		);
 
 		$args = array(
@@ -171,7 +171,7 @@ class WPEMS_Custom_Post_Types {
 	public function register_booking_status() {
 
 		register_post_status( 'ea-cancelled', apply_filters( 'event_auth_register_status_cancelled', array(
-			'label'                     => _x( 'Cancelled', 'Booking status', 'wp-events-manager' ),
+			'label'                     => _x( 'Cancelada', 'Booking status', 'wp-events-manager' ),
 			'public'                    => true,
 			'exclude_from_search'       => false,
 			'show_in_admin_all_list'    => true,
@@ -180,7 +180,7 @@ class WPEMS_Custom_Post_Types {
 		) ) );
 
 		register_post_status( 'ea-pending', apply_filters( 'event_auth_register_status_pending', array(
-			'label'                     => _x( 'Pending', 'Booking status', 'wp-events-manager' ),
+			'label'                     => _x( 'Pendente', 'Booking status', 'wp-events-manager' ),
 			'public'                    => true,
 			'exclude_from_search'       => false,
 			'show_in_admin_all_list'    => true,
@@ -189,7 +189,7 @@ class WPEMS_Custom_Post_Types {
 		) ) );
 
 		register_post_status( 'ea-processing', apply_filters( 'event_auth_register_status_processing', array(
-			'label'                     => _x( 'Processing', 'Booking status', 'wp-events-manager' ),
+			'label'                     => _x( 'Processando', 'Booking status', 'wp-events-manager' ),
 			'public'                    => true,
 			'exclude_from_search'       => false,
 			'show_in_admin_all_list'    => true,
@@ -198,12 +198,12 @@ class WPEMS_Custom_Post_Types {
 		) ) );
 
 		register_post_status( 'ea-completed', apply_filters( 'event_auth_register_status_completed', array(
-			'label'                     => _x( 'Completed', 'Booking status', 'wp-events-manager' ),
+			'label'                     => _x( 'Completada', 'Booking status', 'wp-events-manager' ),
 			'public'                    => true,
 			'exclude_from_search'       => false,
 			'show_in_admin_all_list'    => true,
 			'show_in_admin_status_list' => true,
-			'label_count'               => _n_noop( 'Completed <span class="count">(%s)</span>', 'Completed <span class="count">(%s)</span>' ),
+			'label_count'               => _n_noop( 'Completado <span class="count">(%s)</span>', 'Completed <span class="count">(%s)</span>' ),
 		) ) );
 
 	}
@@ -217,11 +217,11 @@ class WPEMS_Custom_Post_Types {
 	 */
 	public function event_columns( $columns ) {
 		unset( $columns['comments'], $columns['date'] );
-		$columns['start']       = __( 'Start', 'wp-events-manager' );
-		$columns['end']         = __( 'End', 'wp-events-manager' );
+		$columns['start']       = __( 'Início', 'wp-events-manager' );
+		$columns['end']         = __( 'Fim', 'wp-events-manager' );
 		$columns['status']      = __( 'Status', 'wp-events-manager' );
-		$columns['price']       = __( 'Price', 'wp-events-manager' );
-		$columns['booked_slot'] = __( 'Booked / Total', 'wp-events-manager' );
+		$columns['price']       = __( 'Preço', 'wp-events-manager' );
+		$columns['booked_slot'] = __( 'Total Inscrições', 'wp-events-manager' );
 
 		return $columns;
 	}
@@ -299,11 +299,11 @@ class WPEMS_Custom_Post_Types {
 		// set
 		$columns['cb']           = __( '<label class="screen-reader-text __web-inspector-hide-shortcut__" for="cb-select-all-1">Select All</label><input id="cb-select-all-1" type="checkbox">' );
 		$columns['ID']           = __( 'ID', 'wp-events-manager' );
-		$columns['event']        = __( 'Event', 'wp-events-manager' );
-		$columns['user']         = __( 'User', 'wp-events-manager' );
-		$columns['booking_date'] = __( 'Date', 'wp-events-manager' );
-		$columns['cost']         = __( 'Cost', 'wp-events-manager' );
-		$columns['slot']         = __( 'Quantity', 'wp-events-manager' );
+		$columns['event']        = __( 'Evento', 'wp-events-manager' );
+		$columns['user']         = __( 'Usuário', 'wp-events-manager' );
+		$columns['booking_date'] = __( 'Data', 'wp-events-manager' );
+		$columns['cost']         = __( 'Preço', 'wp-events-manager' );
+		$columns['slot']         = __( 'Quantidade', 'wp-events-manager' );
 		$columns['status']       = __( 'Status', 'wp-events-manager' );
 
 		return $columns;
@@ -457,27 +457,27 @@ class WPEMS_Custom_Post_Types {
 		}
 		$messages['tp_event'] = array(
 			0  => '', // Unused. Messages start at index 1.
-			1  => __( 'Event updated.', 'wp-events-manager' ),
+			1  => __( 'Evento atualizado.', 'wp-events-manager' ),
 			2  => __( 'Custom field updated.', 'wp-events-manager' ),
 			3  => __( 'Custom field deleted.', 'wp-events-manager' ),
-			4  => __( 'Event updated.', 'wp-events-manager' ),
+			4  => __( 'Evento atualizado.', 'wp-events-manager' ),
 			/* translators: %s: date and time of the revision */
 			5  => isset( $_GET['revision'] ) ? sprintf( __( 'Book restored to revision from %s', 'wp-events-manager' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-			6  => __( 'Event updated.', 'wp-events-manager' ),
-			7  => __( 'Event saved.', 'wp-events-manager' ),
-			8  => __( 'Event submitted.', 'wp-events-manager' ),
+			6  => __( 'Evento atualizado.', 'wp-events-manager' ),
+			7  => __( 'Evento salvo.', 'wp-events-manager' ),
+			8  => __( 'Evento enviado.', 'wp-events-manager' ),
 			9  => sprintf(
-				__( 'Event scheduled for: <strong>%1$s</strong>.', 'wp-events-manager' ),
+				__( 'Evento agendado para: <strong>%1$s</strong>.', 'wp-events-manager' ),
 				// translators: Publish box date format, see http://php.net/date
 				date_i18n( __( 'M j, Y @ G:i', 'wp-events-manager' ), strtotime( $post->post_date ) )
 			),
-			10 => __( 'Event draft updated.', 'wp-events-manager' )
+			10 => __( 'Rascunho do evento atualizado.', 'wp-events-manager' )
 		);
 
 		if ( $post_type_object->publicly_queryable ) {
 			$permalink = get_permalink( $post->ID );
 
-			$view_link                 = sprintf( ' <a href="%s">%s</a>', esc_url( $permalink ), __( 'View event', 'wp-events-manager' ) );
+			$view_link                 = sprintf( ' <a href="%s">%s</a>', esc_url( $permalink ), __( 'Ver evento', 'wp-events-manager' ) );
 			$messages[ $post_type ][1] .= $view_link;
 			$messages[ $post_type ][6] .= $view_link;
 			$messages[ $post_type ][9] .= $view_link;

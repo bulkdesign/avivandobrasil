@@ -60,12 +60,14 @@
           acontece no movimento cristão evangélico do Brasil. Desde informações e localização das<br>
           principais igrejas até datas de eventos, congressos, treinamentos, bandas e pastores que<br>
           estarão na sua cidade e nas igrejas.
-          <br><br>
-          Tudo em um só lugar! Com o Avivando Brasil você fica sempre ligado e não perde nada!
-          <br><br>
+        </h3>
+        <br>
+        <h3 class="texto-amarelo bold">Tudo em um só lugar! Com o Avivando Brasil você fica sempre ligado e não perde nada!</h3>
+        <br>
+        <h3 class="white-text">
           Inscreva-se e receba informações semanais! Quem estará tocando e pregando? Onde será?<br>
           Quais serão os dias e horários? Quanto é a inscrição?<br>
-          Com o Avivando Brasil você por dentro de tudo!
+          Com o Avivando Brasil você fica por dentro de tudo!
         </h3>
       </div>
     </div>
@@ -97,7 +99,7 @@
         <h3 class="texto-menos-escuro fs25">Veja abaixo os principais eventos que acontecerão nos próximos dias:</h3>
       </div>
       <div class="col s12">
-        <?php $eventos = array('post_type' => 'tp_event', 'posts_per_page' => 3);
+        <?php $eventos = array('post_type' => 'tp_event', 'posts_per_page' => 3, 'post_status' => 'publish');
           $listadeeventos = new WP_Query( $eventos );
             if ( $listadeeventos->have_posts() ) {
               while ( $listadeeventos->have_posts() ) : $listadeeventos->the_post(); ?>

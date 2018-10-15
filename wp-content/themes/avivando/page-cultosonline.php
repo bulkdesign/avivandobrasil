@@ -8,30 +8,6 @@
   padding: 0;
 }
   
-.igrejas {
-  width:100%;
-  height:500px;
-  text-align:center;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.igrejas h1 {
-  font-size: 50px;
-  padding: 10px 10px 0;
-  margin: 0;
-}
-
-#mapa {
-  height: auto;
-  padding: 50px 0px;
-}
-
-#mapa h1 {
-  margin: 20px 0 30px;
-}
-
 </style>
 
 <!-- TOPO -->
@@ -42,13 +18,13 @@
 <!-- INÍCIO DO WHILE -->
 <div class="row">
   <div class="col s12 m10 push-m1 margin60 marginb50">
-    <?php $igrejas = new WP_Query( array( 'post_type' => 'wpsl_stores' )); ?>
+    <?php $igrejas = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'wpsl_stores' )); ?>
       <?php while ( $igrejas->have_posts() ) : $igrejas->the_post(); ?>
         <?php if (get_field('culto_ao_vivo')): ?>
-          <div class="col s12 m4">
-            <a href="<?php echo the_permalink(); ?>">
-              <?php the_post_thumbnail('medium', array('class' => 'image-center hoverable')); ?>
-              <h3 class="margin20"><?php the_title(); ?></h3>
+          <div class="col s12 m3">
+            <a target="blank" href="<?php the_field('culto_ao_vivo'); ?>">
+              <?php the_post_thumbnail('thumbnail', array('class' => 'image-center hoverable')); ?>
+              <h3 style="font-size:16px;" class="margin20"><?php the_title(); ?></h3>
             </a>
           </div>
         <?php endif; ?>

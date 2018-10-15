@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="margin60 justify" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="margin150 center" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 	/**
 	 * Functions hooked in to storefront_page add_action

@@ -28,23 +28,23 @@ $tomorrow = date( "d-m-Y", strtotime( 'tomorrow' ) );
 		<?php do_action( 'tp_event_admin_event_metabox_before_fields', $post, $prefix ); ?>
         <div class="option_group">
             <p class="form-field">
-                <label for="_qty"><?php _e( 'Quantity', 'wp-events-manager' ) ?></label>
+                <label for="_qty"><?php _e( 'Quantidade Disponível', 'wp-events-manager' ) ?></label>
                 <input type="number" min="0" step="1" class="short" name="<?php echo esc_attr( $prefix ) ?>qty" id="_qty" value="<?php echo esc_attr( absint( $qty ) ) ?>">
             </p>
         </div>
         <div class="option_group">
             <p class="form-field">
-                <label for="_price"><?php printf( '%s(%s)', __( 'Price', 'wp-events-manager' ), wpems_get_currency_symbol() ) ?></label>
+                <label for="_price"><?php printf( '%s(%s)', __( 'Preço', 'wp-events-manager' ), wpems_get_currency_symbol() ) ?></label>
                 <input type="number" step="any" min="0" class="short" name="<?php echo esc_attr( $prefix ) ?>price" id="_price" value="<?php echo esc_attr( floatval( $price ) ) ?>" />
             </p>
             <p class="event-meta-notice">
-				<?php echo esc_html__( 'Set 0 to make it becomes free event', 'wp-events-manager' ); ?>
+				<?php echo esc_html__( 'Deixe 0 se o evento é gratuito', 'wp-events-manager' ); ?>
             </p>
         </div>
 
         <div class="option_group">
             <div class="form-field" id="event-time-metabox">
-                <label><?php echo esc_html__( 'Start/End', 'wp-events-manager' ); ?></label>
+                <label><?php echo esc_html__( 'Início/Fim', 'wp-events-manager' ); ?></label>
                 <label hidden for="_date_start"></label>
                 <input type="text" class="short date-start" name="<?php echo esc_attr( $prefix ) ?>date_start" id="_date_start"
                        value="<?php echo $date_start ? esc_attr( $date_start ) : esc_attr( $today ); ?>">

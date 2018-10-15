@@ -1057,10 +1057,10 @@ if ( ! function_exists( 'wpems_get_payment_status' ) ) {
 
 	function wpems_get_payment_status() {
 		return apply_filters( 'wpems_get_payment_status', array(
-			'ea-cancelled'  => sprintf( __( '<span class="event_booking_status cancelled">%s</span>', 'wp-events-manager' ), __( 'Cancelled', 'wp-events-manager' ) ),
-			'ea-pending'    => sprintf( __( '<span class="event_booking_status pending">%s</span>', 'wp-events-manager' ), __( 'Pending', 'wp-events-manager' ) ),
-			'ea-processing' => sprintf( __( '<span class="event_booking_status processing">%s</span>', 'wp-events-manager' ), __( 'Processing', 'wp-events-manager' ) ),
-			'ea-completed'  => sprintf( __( '<span class="event_booking_status completed">%s</span>', 'wp-events-manager' ), __( 'Completed', 'wp-events-manager' ) ),
+			'ea-cancelled'  => sprintf( __( '<span class="event_booking_status cancelled">%s</span>', 'wp-events-manager' ), __( 'Cancelado', 'wp-events-manager' ) ),
+			'ea-pending'    => sprintf( __( '<span class="event_booking_status pending">%s</span>', 'wp-events-manager' ), __( 'Pendente', 'wp-events-manager' ) ),
+			'ea-processing' => sprintf( __( '<span class="event_booking_status processing">%s</span>', 'wp-events-manager' ), __( 'Processando', 'wp-events-manager' ) ),
+			'ea-completed'  => sprintf( __( '<span class="event_booking_status completed">%s</span>', 'wp-events-manager' ), __( 'Completado', 'wp-events-manager' ) ),
 		) );
 	}
 
@@ -1286,12 +1286,12 @@ function wpems_admin_table_tabs() {
 		array(
 			10 => array(
 				'link' => 'edit.php?post_type=tp_event',
-				'name' => __( 'Events', 'wp-events-manager' ),
+				'name' => __( 'Eventos', 'wp-events-manager' ),
 				'id'   => 'edit-tp_event'
 			),
 			20 => array(
 				'link' => 'edit-tags.php?taxonomy=tp_event_category&post_type=tp_event',
-				'name' => __( 'Categories', 'wp-events-manager' ),
+				'name' => __( 'Categorias', 'wp-events-manager' ),
 				'id'   => 'edit-tp_event_category'
 			)
 		)

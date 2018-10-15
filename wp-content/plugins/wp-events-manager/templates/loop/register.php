@@ -32,7 +32,7 @@ if ( absint( $event->qty ) == 0 || get_post_meta( get_the_ID(), 'tp_event_status
                     </span>
                     <br>
                     <span class="label"><?php _e( 'Valor:', 'wp-events-manager' ) ?></span>
-                    <span class="detail bold"><?php printf( '%s', $event->is_free() ? __( 'Free', 'wp-events-manager' ) : wpems_format_price( $event->get_price() ) ) ?></span>
+                    <span class="detail bold"><?php printf( '%s', $event->is_free() ? __( 'Gratuito', 'wp-events-manager' ) : wpems_format_price( $event->get_price() ) ) ?></span>
                 </li>
             </ul>
         </div>
@@ -42,13 +42,13 @@ if ( absint( $event->qty ) == 0 || get_post_meta( get_the_ID(), 'tp_event_status
 		<?php
 		$registered_time = $event->booked_quantity( get_current_user_id() );
 		if ( $registered_time && wpems_get_option( 'email_register_times' ) === 'once' && $event->is_free() ) { ?>
-            <p><?php echo __( 'You have registered this event before.', 'wp-events-manager' ); ?></p>
+            <p><?php echo __( 'Já se inscreveu neste evento.', 'wp-events-manager' ); ?></p>
 		<?php } else { ?>
             <a class="amarelo texto-menos-escuro event_register_submit event_auth_button event-load-booking-form"
-               data-event="<?php echo esc_attr( get_the_ID() ) ?>"><?php _e( 'Comprar ingresso', 'wp-events-manager' ); ?></a>
+               data-event="<?php echo esc_attr( get_the_ID() ) ?>"><?php _e( 'Tenho Interesse!', 'wp-events-manager' ); ?></a>
 		<?php } ?>
 	<?php } else { ?>
-        <p><?php echo sprintf( __( 'You must <a href="%s">login</a> before register event.', 'wp-events-manager' ), wpems_login_url() ); ?></p>
+        <p><?php echo sprintf( __( 'Você deve fazer o <a href="%s">login</a> antes de se inscrever.', 'wp-events-manager' ), wpems_login_url() ); ?></p>
 	<?php } ?>
 
 </div>

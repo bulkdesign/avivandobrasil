@@ -21,7 +21,7 @@ class WPEMS_Admin_Metaboxes {
 	 */
 	public static function add_meta_boxes() {
 		add_meta_box(
-			'event-settings-metabox', __( 'Event Settings', 'wp-events-manager' ), array( 'WPEMS_Admin_Metabox_Event', 'render' ), 'tp_event', 'normal', 'high'
+			'event-settings-metabox', __( 'Configurações do Evento', 'wp-events-manager' ), array( 'WPEMS_Admin_Metabox_Event', 'render' ), 'tp_event', 'normal', 'high'
 		);
 		add_meta_box(
 			'booking-information-metabox', __( 'Booking Information', 'wp-events-manager' ), array( 'WPEMS_Admin_Metabox_Booking', 'render' ), 'event_auth_book', 'normal', 'default'
